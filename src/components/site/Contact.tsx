@@ -22,20 +22,20 @@ export const Contact = () => {
     setSending(true);
 
     try {
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("email", email);
+      formData.append("message", message);
+      formData.append("_subject", `New inquiry from ${name}`);
+      formData.append("_template", "table");
+      formData.append("_captcha", "false");
+
       const response = await fetch("https://formsubmit.co/ajax/brandkingconsult@gmail.com", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({
-          name,
-          email,
-          message,
-          _subject: `New inquiry from ${name}`,
-          _template: "table",
-          _captcha: "false",
-        }),
+        body: formData,
       });
 
       if (response.ok) {
