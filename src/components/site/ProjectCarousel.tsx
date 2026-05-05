@@ -55,8 +55,9 @@ const ProjectCard = ({
   return (
     <Link
       to={`${basePath}/${project.slug}`}
-      <div className="group block w-[78vw] shrink-0 sm:w-[420px] tablet:w-[500px]"
+      className="group block w-[78vw] shrink-0 sm:w-[420px] tablet:w-[500px]"
     >
+
       <div className="relative aspect-[4/3] overflow-hidden border border-border bg-card transition-all duration-700 group-hover:border-primary/60">
         {project.images && project.images.length > 0 ? (
           <ProjectCardImage images={project.images} />

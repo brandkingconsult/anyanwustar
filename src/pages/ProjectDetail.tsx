@@ -324,14 +324,14 @@ const ProjectDetail = ({ kind }: Props) => {
 
             {project.myRole.length > 0 && (
               <section className="reveal">
-                <h2 className="font-display text-2xl text-foreground md:text-3xl">
+                <h2 className="font-display text-2xl text-foreground tablet:text-3xl">
                   My role
                 </h2>
                 <ul className="mt-6 space-y-3">
                   {project.myRole.map((r, i) => (
                     <li
                       key={i}
-                      className="flex gap-4 text-base leading-relaxed text-muted-foreground md:text-lg"
+                      className="flex gap-4 text-base leading-relaxed text-muted-foreground tablet:text-lg"
                     >
                       <span className="mt-3 h-px w-6 shrink-0 bg-primary/70" />
                       <span>{r}</span>
@@ -341,15 +341,16 @@ const ProjectDetail = ({ kind }: Props) => {
               </section>
             )}
 
+
             <section className="reveal">
-              <h2 className="font-display text-2xl text-foreground md:text-3xl">
+              <h2 className="font-display text-2xl text-foreground tablet:text-3xl">
                 Outcome
               </h2>
-              <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
               <p className="mt-6 text-base leading-relaxed text-muted-foreground tablet:text-lg">
                 {project.outcome}
               </p>
             </section>
+
 
             {isProduct && project.url && (
               <section className="reveal border border-border bg-card/40 p-8 tablet:p-10">
