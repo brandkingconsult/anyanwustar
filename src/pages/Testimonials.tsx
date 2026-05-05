@@ -8,34 +8,26 @@ import { FloatingActions } from "@/components/site/FloatingActions";
 import { useReveal } from "@/hooks/use-reveal";
 import { testimonials } from "@/data/testimonials";
 
-const allTags = Array.from(new Set(testimonials.flatMap((t) => t.tags))).sort();
 
 const Testimonials = () => {
   useReveal();
   const location = useLocation();
   const [consultOpen, setConsultOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const [activeTag, setActiveTag] = useState<string | null>(null);
+  const [sortOrder, setSortOrder] = useState<"newest" | "oldest">("newest");
 
   useEffect(() => {
     document.title = "Testimonials — Star";
+    window.scrollTo({ top: 0 });
   }, []);
-
-  // Sort newest → oldest
-  const sorted = useMemo(
-    () =>
-      [...testimonials].sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-      ),
-    [],
-  );
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return sorted.filter((t) => {
-      if (activeTag && !t.tags.includes(activeTag)) return false;
-      if (!q) return true;
-      return (
+    let list = [...testimonials];
+
+    // Filter by search query
+    if (q) {
+      list = list.filter((t) =>
         t.name.toLowerCase().includes(q) ||
         t.role.toLowerCase().includes(q) ||
         t.shortQuote.toLowerCase().includes(q) ||
@@ -43,8 +35,17 @@ const Testimonials = () => {
         t.shift.toLowerCase().includes(q) ||
         t.after.toLowerCase().includes(q)
       );
+    }
+
+    // Sort by date
+    list.sort((a, b) => {
+      const dateA = new Date(a.date).getTime();
+      const dateB = new Date(b.date).getTime();
+      return sortOrder === "newest" ? dateB - dateA : dateA - dateB;
     });
-  }, [sorted, query, activeTag]);
+
+    return list;
+  }, [query, sortOrder]);
 
   // Scroll to anchored testimonial when arriving via #slug
   useEffect(() => {
@@ -73,7 +74,7 @@ const Testimonials = () => {
 
           <div className="reveal mt-12 max-w-3xl">
             <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
-              Testimonials · {sorted.length} stories
+              Testimonials · {testimonials.length} stories
             </p>
             <h1 className="mt-8 font-display text-4xl font-medium leading-[1.05] md:text-6xl lg:text-7xl">
               Before, the shift, and what came after.
@@ -85,7 +86,7 @@ const Testimonials = () => {
             </p>
           </div>
 
-          {/* Search + filters */}
+          {/* Search + Sort */}
           <div className="reveal mt-16 flex flex-col gap-4 border-y border-border py-6 md:flex-row md:items-center md:justify-between">
             <div className="relative w-full md:max-w-sm">
               <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
@@ -96,32 +97,19 @@ const Testimonials = () => {
                 className="w-full border border-border bg-transparent py-3 pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none"
               />
             </div>
-            <div className="flex flex-wrap gap-2">
-              <button
-                onClick={() => setActiveTag(null)}
-                className={`border px-3 py-1.5 text-[11px] uppercase tracking-[0.2em] transition-colors ${
-                  activeTag === null
-                    ? "border-foreground bg-foreground text-background"
-                    : "border-border text-muted-foreground hover:border-foreground hover:text-foreground"
-                }`}
+            <div className="flex items-center gap-3">
+              <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">Sort by:</span>
+              <select
+                value={sortOrder}
+                onChange={(e) => setSortOrder(e.target.value as "newest" | "oldest")}
+                className="appearance-none border border-border bg-transparent py-2 pl-3 pr-8 text-[11px] uppercase tracking-[0.18em] text-foreground outline-none transition-colors hover:border-foreground"
               >
-                All
-              </button>
-              {allTags.map((tag) => (
-                <button
-                  key={tag}
-                  onClick={() => setActiveTag(tag === activeTag ? null : tag)}
-                  className={`border px-3 py-1.5 text-[11px] uppercase tracking-[0.2em] transition-colors ${
-                    activeTag === tag
-                      ? "border-foreground bg-foreground text-background"
-                      : "border-border text-muted-foreground hover:border-foreground hover:text-foreground"
-                  }`}
-                >
-                  {tag}
-                </button>
-              ))}
+                <option value="newest" className="bg-background">Newest first</option>
+                <option value="oldest" className="bg-background">Oldest first</option>
+              </select>
             </div>
           </div>
+
 
           {/* Stories — newest first */}
           <div className="mt-16 space-y-24 md:mt-24 md:space-y-32">
