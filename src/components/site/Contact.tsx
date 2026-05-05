@@ -69,19 +69,19 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-32 md:py-40">
+    <section id="contact" className="py-32 tablet:py-40">
       <div className="container-tight">
         <div className="reveal">
           <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
             09 — Contact
           </p>
-          <h2 className="mt-6 font-display text-5xl font-medium leading-[1.02] md:text-7xl lg:text-8xl">
+          <h2 className="mt-6 font-display text-5xl font-medium leading-[1.02] tablet:text-7xl lg:text-8xl">
             Let's talk.
           </h2>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="link-underline inline-block font-display text-2xl text-primary md:text-3xl"
+              className="link-underline inline-block font-display text-2xl text-primary tablet:text-3xl"
             >
               {CONTACT_EMAIL}
             </a>
@@ -114,7 +114,7 @@ export const Contact = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="reveal mt-20 grid gap-10 border-t border-border pt-16 md:grid-cols-2"
+          className="reveal mt-20 grid gap-10 border-t border-border pt-16 tablet:grid-cols-2"
         >
           <div className="space-y-2">
             <label className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
@@ -139,7 +139,7 @@ export const Contact = () => {
               className="w-full border-0 border-b border-border bg-transparent py-3 text-lg text-foreground outline-none transition-colors focus:border-primary"
             />
           </div>
-          <div className="space-y-2 md:col-span-2">
+          <div className="space-y-2 tablet:col-span-2">
             <label className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
               What are you working on?
             </label>
@@ -166,7 +166,8 @@ export const Contact = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-6 md:col-span-2">
+          <div className="flex flex-wrap items-center gap-6 tablet:col-span-2">
+
             <button
               type="submit"
               disabled={wordCount > MAX_WORDS || sending}

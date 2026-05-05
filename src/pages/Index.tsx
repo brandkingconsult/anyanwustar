@@ -38,7 +38,6 @@ const Index = () => {
       <main>
         <Hero onBookConsultation={() => setConsultOpen(true)} />
         <About />
-        {/* 
         <ProjectCarousel
           id="work"
           index="02"
@@ -48,7 +47,7 @@ const Index = () => {
           basePath="/work"
           items={workProjects}
         /> 
-        */}
+
         <ProjectCarousel
           id="products"
           index="03"

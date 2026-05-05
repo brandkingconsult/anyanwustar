@@ -15,18 +15,19 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="services" className="py-32 md:py-40">
+    <section id="services" className="py-32 tablet:py-40">
       <div className="container-tight">
         <div className="reveal">
           <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
             05 — Services
           </p>
-          <h2 className="mt-6 max-w-3xl font-display text-3xl font-medium leading-tight md:text-5xl">
+          <h2 className="mt-6 max-w-3xl font-display text-3xl font-medium leading-tight tablet:text-5xl">
             Three ways to work with me.
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-16 grid gap-8 tablet:grid-cols-3">
+
           {services.map((s) => (
             <div
               key={s.title}

@@ -80,27 +80,29 @@ const Projects = () => {
     <div className="min-h-screen bg-background text-foreground">
       <TopNav onBookConsultation={() => setConsultOpen(true)} />
 
-      <main className="pt-32 md:pt-40">
+      <main className="pt-32 tablet:pt-40">
         <div className="container-tight">
           <div className="reveal">
             <p className="font-mono text-xs uppercase tracking-[0.22em] text-muted-foreground">
               Archive
             </p>
-            <h1 className="mt-6 max-w-4xl font-display text-4xl font-medium leading-[1.05] md:text-6xl lg:text-7xl">
+            <h1 className="mt-6 max-w-4xl font-display text-4xl font-medium leading-[1.05] tablet:text-6xl lg:text-7xl">
               Every project, in one place.
             </h1>
-            <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground tablet:text-lg">
               Search across UI/UX work and shipped products. Filter by type, sort by date or name.
             </p>
           </div>
         </div>
 
+
         {/* Sticky filter bar */}
-        <div className="sticky top-16 z-30 mt-16 border-y border-border bg-background/85 backdrop-blur-xl md:top-20">
+        <div className="sticky top-16 z-30 mt-16 border-y border-border bg-background/85 backdrop-blur-xl tablet:top-20">
           <div className="container-tight">
-            <div className="flex flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
+            <div className="flex flex-col gap-4 py-4 tablet:flex-row tablet:items-center tablet:justify-between">
               {/* Search */}
-              <div className="group relative flex w-full items-center md:max-w-md">
+              <div className="group relative flex w-full items-center tablet:max-w-md">
+
                 <Search className="pointer-events-none absolute left-3 h-4 w-4 text-muted-foreground transition-colors group-focus-within:text-foreground" />
                 <input
                   type="search"
@@ -162,7 +164,8 @@ const Projects = () => {
                 </div>
 
                 {/* View toggle */}
-                <div className="hidden items-center gap-1 border border-border bg-foreground/[0.03] p-1 md:flex">
+                <div className="hidden items-center gap-1 border border-border bg-foreground/[0.03] p-1 tablet:flex">
+
                   <button
                     type="button"
                     onClick={() => setView("grid")}
@@ -194,7 +197,8 @@ const Projects = () => {
         </div>
 
         {/* Results */}
-        <div className="container-tight py-16 md:py-20">
+        <div className="container-tight py-16 tablet:py-20">
+
           <p className="mb-8 text-xs uppercase tracking-[0.18em] text-muted-foreground">
             {filtered.length} {filtered.length === 1 ? "project" : "projects"}
             {query && (
@@ -219,15 +223,17 @@ const Projects = () => {
               </button>
             </div>
           ) : view === "grid" ? (
-            <div className="grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-px bg-border tablet:grid-cols-2 lg:grid-cols-3">
+
               {filtered.map((p) => {
                 const basePath = p.kind === "work" ? "/work" : "/products";
                 return (
                   <Link
                     key={p.slug}
                     to={`${basePath}/${p.slug}`}
-                    className="group flex flex-col bg-background p-6 transition-colors hover:bg-card md:p-8"
+                    className="group flex flex-col bg-background p-6 transition-colors hover:bg-card tablet:p-8"
                   >
+
                     <div className="flex items-center justify-between">
                       <span className="border border-border px-2 py-0.5 text-[9px] uppercase tracking-[0.22em] text-muted-foreground">
                         {p.kind === "work" ? "UI/UX" : "Product"}
@@ -236,9 +242,10 @@ const Projects = () => {
                         {p.year}
                       </span>
                     </div>
-                    <h2 className="mt-10 font-display text-2xl leading-tight text-foreground md:text-3xl">
+                    <h2 className="mt-10 font-display text-2xl leading-tight text-foreground tablet:text-3xl">
                       {p.title}
                     </h2>
+
                     {p.subtitle && (
                       <p className="mt-2 text-sm text-muted-foreground">
                         {p.subtitle}
@@ -267,25 +274,27 @@ const Projects = () => {
                     to={`${basePath}/${p.slug}`}
                     className="group grid grid-cols-12 items-center gap-4 border-b border-border px-2 py-6 transition-colors hover:bg-card"
                   >
-                    <span className="col-span-2 font-mono text-xs text-muted-foreground md:col-span-1">
+                    <span className="col-span-2 font-mono text-xs text-muted-foreground tablet:col-span-1">
                       {p.year}
                     </span>
-                    <div className="col-span-10 md:col-span-6">
-                      <p className="font-display text-lg text-foreground md:text-xl">
+                    <div className="col-span-10 tablet:col-span-6">
+                      <p className="font-display text-lg text-foreground tablet:text-xl">
                         {p.title}
                       </p>
+
                       {p.subtitle && (
                         <p className="text-sm text-muted-foreground">
                           {p.subtitle}
                         </p>
                       )}
                     </div>
-                    <span className="col-span-6 hidden text-xs uppercase tracking-[0.18em] text-muted-foreground md:col-span-3 md:block">
+                    <span className="col-span-6 hidden text-xs uppercase tracking-[0.18em] text-muted-foreground tablet:col-span-3 tablet:block">
                       {p.tags.slice(0, 2).join(" · ")}
                     </span>
-                    <span className="col-span-5 hidden text-right text-[10px] uppercase tracking-[0.22em] text-muted-foreground md:col-span-1 md:block">
+                    <span className="col-span-5 hidden text-right text-[10px] uppercase tracking-[0.22em] text-muted-foreground tablet:col-span-1 tablet:block">
                       {p.kind === "work" ? "UI/UX" : "Product"}
                     </span>
+
                     <ArrowUpRight className="col-span-1 h-5 w-5 justify-self-end text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
                   </Link>
                 );

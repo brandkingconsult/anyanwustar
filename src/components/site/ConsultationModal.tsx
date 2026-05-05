@@ -67,12 +67,12 @@ export const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps
         className="max-w-2xl gap-0 border border-border bg-background p-0 sm:!rounded-none"
       >
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-border px-6 py-4 md:px-8">
+        <div className="flex items-center justify-between border-b border-border px-6 py-4 tablet:px-8">
           <div>
             <p className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
               Consultation · 30 minutes
             </p>
-            <p className="mt-1 font-display text-base text-foreground md:text-lg">
+            <p className="mt-1 font-display text-base text-foreground tablet:text-lg">
               Book a working session with me
             </p>
           </div>
@@ -86,7 +86,7 @@ export const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps
         </div>
 
         {/* Steps indicator */}
-        <div className="flex items-center gap-2 border-b border-border px-6 py-3 md:px-8">
+        <div className="flex items-center gap-2 border-b border-border px-6 py-3 tablet:px-8">
           {[1, 2].map((s) => (
             <div key={s} className="flex items-center gap-2">
               <span
@@ -107,10 +107,11 @@ export const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps
           ))}
         </div>
 
-        <form onSubmit={handleSubmit} className="max-h-[70vh] overflow-y-auto px-6 py-8 md:px-8 md:py-10">
+        <form onSubmit={handleSubmit} className="max-h-[70vh] overflow-y-auto px-6 py-8 tablet:px-8 tablet:py-10">
           {step === 1 && (
             <div className="space-y-6">
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-6 tablet:grid-cols-2">
+
                 <Field label="Full name">
                   <input
                     required

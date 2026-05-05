@@ -43,7 +43,7 @@ export const TopNav = ({ onBookConsultation }: TopNavProps) => {
           : "border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-5 md:h-20 md:px-10">
+      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-5 tablet:h-20 tablet:px-10">
         <Link to="/" onClick={close} className="group flex items-center gap-2.5">
           <span
             aria-hidden
@@ -59,7 +59,7 @@ export const TopNav = ({ onBookConsultation }: TopNavProps) => {
         </Link>
 
         {/* Desktop links */}
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-1 tablet:flex">
           {navLinks.map((l) => (
             <a
               key={l.href}
@@ -72,7 +72,7 @@ export const TopNav = ({ onBookConsultation }: TopNavProps) => {
         </nav>
 
         {/* Desktop actions */}
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-2 tablet:flex">
           <a
             href="/star-resume.pdf"
             download="Star-Anyanwu-Resume.pdf"
@@ -96,7 +96,7 @@ export const TopNav = ({ onBookConsultation }: TopNavProps) => {
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          className="relative flex h-10 w-10 items-center justify-center border border-border bg-foreground/[0.04] text-foreground transition-colors hover:bg-foreground/[0.08] md:hidden"
+          className="relative flex h-10 w-10 items-center justify-center border border-border bg-foreground/[0.04] text-foreground transition-colors hover:bg-foreground/[0.08] tablet:hidden"
         >
           <span
             className={`absolute transition-all duration-300 ${
@@ -117,10 +117,11 @@ export const TopNav = ({ onBookConsultation }: TopNavProps) => {
 
       {/* Mobile menu drawer */}
       <div
-        className={`md:hidden overflow-hidden transition-[max-height,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        className={`tablet:hidden overflow-hidden transition-[max-height,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           open ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
+
         <div className="border-t border-border/60 bg-background/85 px-5 pb-8 pt-4 backdrop-blur-xl">
           <nav className="flex flex-col">
             {navLinks.map((l, i) => (

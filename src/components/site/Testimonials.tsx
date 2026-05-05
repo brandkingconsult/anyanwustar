@@ -28,7 +28,7 @@ export const Testimonials = () => {
   const loop = [...testimonials, ...testimonials];
 
   return (
-    <section id="testimonials" className="relative overflow-hidden py-32 md:py-40">
+    <section id="testimonials" className="relative overflow-hidden py-32 tablet:py-40">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10"
@@ -38,22 +38,22 @@ export const Testimonials = () => {
         }}
       />
       <div className="container-tight">
-        <div className="reveal flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="reveal flex flex-col gap-6 tablet:flex-row tablet:items-end tablet:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
               07 — Said about the work
             </p>
-            <h2 className="mt-6 max-w-xl font-display text-3xl font-medium leading-tight md:text-5xl">
+            <h2 className="mt-6 max-w-xl font-display text-3xl font-medium leading-tight tablet:text-5xl">
               Words from the founders I've shipped with.
             </h2>
           </div>
-          <div className="flex flex-col gap-4 md:items-end">
+          <div className="flex flex-col gap-4 tablet:items-end">
             <p className="max-w-sm text-sm text-muted-foreground">
               Real notes from real teams — written after we shipped together.
             </p>
             <Link
               to="/testimonials"
-              className="group inline-flex items-center gap-3 self-start border border-foreground px-5 py-2.5 text-[11px] uppercase tracking-[0.22em] text-foreground transition-colors hover:bg-foreground hover:text-background md:self-auto"
+              className="group inline-flex items-center gap-3 self-start border border-foreground px-5 py-2.5 text-[11px] uppercase tracking-[0.22em] text-foreground transition-colors hover:bg-foreground hover:text-background tablet:self-auto"
             >
               Read every story
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -83,12 +83,13 @@ export const Testimonials = () => {
         >
           <div
             data-paused={paused}
-            className="testimonial-track flex w-max gap-5 px-5 md:gap-6 md:pl-10"
+            className="testimonial-track flex w-max gap-5 px-5 tablet:gap-6 tablet:pl-10"
           >
             {loop.map((t, i) => (
               <figure
                 key={`${t.slug}-${i}`}
-                className="group relative flex w-[82vw] shrink-0 flex-col border border-border/60 bg-card/40 p-7 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-primary/40 hover:bg-card sm:w-[420px] md:w-[460px] md:p-8"
+                className="group relative flex w-[82vw] shrink-0 flex-col border border-border/60 bg-card/40 p-7 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-primary/40 hover:bg-card sm:w-[420px] tablet:w-[460px] md:p-8"
+
               >
                 <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 

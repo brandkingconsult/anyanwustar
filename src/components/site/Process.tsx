@@ -23,13 +23,13 @@ const steps = [
 
 export const Process = () => {
   return (
-    <section id="process" className="py-32 md:py-40">
+    <section id="process" className="py-32 tablet:py-40">
       <div className="container-tight">
         <div className="reveal">
           <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
             04 — Process
           </p>
-          <h2 className="mt-6 max-w-3xl font-display text-3xl font-medium leading-tight md:text-5xl">
+          <h2 className="mt-6 max-w-3xl font-display text-3xl font-medium leading-tight tablet:text-5xl">
             How I think — and how the work actually gets made.
           </h2>
         </div>
@@ -38,13 +38,14 @@ export const Process = () => {
           {steps.map((s) => (
             <div
               key={s.n}
-              className="reveal bg-background p-8 md:p-10"
+              className="reveal bg-background p-8 tablet:p-10"
             >
               <p className="font-mono text-xs text-primary">{s.n}</p>
-              <h3 className="mt-6 font-display text-xl text-foreground md:text-2xl">
+              <h3 className="mt-6 font-display text-xl text-foreground tablet:text-2xl">
                 {s.title}
               </h3>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground tablet:text-base">
+
                 {s.body}
               </p>
             </div>

@@ -38,25 +38,25 @@ const faqs = [
 
 export const FAQ = () => {
   return (
-    <section className="py-32 md:py-40">
-      <div className="container-tight grid gap-16 md:grid-cols-12">
-        <div className="reveal md:col-span-4">
+    <section className="py-32 tablet:py-40">
+      <div className="container-tight grid gap-16 tablet:grid-cols-12">
+        <div className="reveal tablet:col-span-4">
           <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
             08 — Questions
           </p>
-          <h2 className="mt-6 font-display text-3xl font-medium leading-tight md:text-4xl">
+          <h2 className="mt-6 font-display text-3xl font-medium leading-tight tablet:text-4xl">
             Common questions, answered directly.
           </h2>
         </div>
 
-        <div className="reveal md:col-span-8">
+        <div className="reveal tablet:col-span-8">
           <Accordion type="single" collapsible className="hairline">
             {faqs.map((f, i) => (
               <AccordionItem key={f.q} value={`item-${i}`} className="border-b border-border">
-                <AccordionTrigger className="py-6 text-left font-display text-base font-medium text-foreground hover:no-underline md:text-lg">
+                <AccordionTrigger className="py-6 text-left font-display text-base font-medium text-foreground hover:no-underline tablet:text-lg">
                   {f.q}
                 </AccordionTrigger>
-                <AccordionContent className="pb-6 text-sm leading-relaxed text-muted-foreground md:text-base">
+                <AccordionContent className="pb-6 text-sm leading-relaxed text-muted-foreground tablet:text-base">
                   {f.a}
                 </AccordionContent>
               </AccordionItem>
@@ -65,5 +65,6 @@ export const FAQ = () => {
         </div>
       </div>
     </section>
+
   );
 };

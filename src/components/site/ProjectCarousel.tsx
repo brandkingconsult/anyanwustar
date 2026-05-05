@@ -55,7 +55,7 @@ const ProjectCard = ({
   return (
     <Link
       to={`${basePath}/${project.slug}`}
-      className="group block w-[78vw] shrink-0 sm:w-[420px] md:w-[500px]"
+      <div className="group block w-[78vw] shrink-0 sm:w-[420px] tablet:w-[500px]"
     >
       <div className="relative aspect-[4/3] overflow-hidden border border-border bg-card transition-all duration-700 group-hover:border-primary/60">
         {project.images && project.images.length > 0 ? (
@@ -82,7 +82,7 @@ const ProjectCard = ({
 
         <div className="absolute bottom-8 left-8 right-8 z-10">
           <div className="h-px w-1/3 bg-primary/70 transition-all duration-700 group-hover:w-full" />
-          <p className="mt-4 font-display text-xl text-white md:text-2xl">
+          <p className="mt-4 font-display text-xl text-white tablet:text-2xl">
             {project.title}
           </p>
         </div>
@@ -148,14 +148,14 @@ export const ProjectCarousel = ({
   }, []);
 
   return (
-    <section id={id} className="overflow-hidden py-28 md:py-40">
+    <section id={id} className="overflow-hidden py-28 tablet:py-40">
       <div className="container-tight">
-        <div className="reveal flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+        <div className="reveal flex flex-col gap-8 tablet:flex-row tablet:items-end tablet:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
               {index} — {eyebrow}
             </p>
-            <h2 className="mt-6 max-w-2xl font-display text-3xl font-medium leading-tight md:text-5xl">
+            <h2 className="mt-6 max-w-2xl font-display text-3xl font-medium leading-tight tablet:text-5xl">
               {title}
             </h2>
           </div>
@@ -173,7 +173,8 @@ export const ProjectCarousel = ({
       </div>
 
       <div
-        className="reveal mt-12 md:mt-16"
+        className="reveal mt-12 tablet:mt-16"
+
         style={{
           maskImage:
             "linear-gradient(to right, transparent, black 4%, black 96%, transparent)",

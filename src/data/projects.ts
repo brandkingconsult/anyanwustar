@@ -22,6 +22,35 @@ import dwellr03 from "@/assets/projects/Dwellr/dwellr-03-property.png";
 import dwellr04 from "@/assets/projects/Dwellr/dwellr-04-messages.png";
 import dwellr05 from "@/assets/projects/Dwellr/dwellr-05-agent.png";
 
+// Lier PC Visuals
+import lier01 from "@/assets/UIUX Projects/Leir/cover-1.png";
+import lier02 from "@/assets/UIUX Projects/Leir/cover-2.png";
+import lier03 from "@/assets/UIUX Projects/Leir/cover-3.png";
+import lier04 from "@/assets/UIUX Projects/Leir/cover-4.png";
+import lier05 from "@/assets/UIUX Projects/Leir/cover-5.png";
+
+// BookTiqo Visuals
+import booktiqo01 from "@/assets/UIUX Projects/BookTiqo/booktiqo-cover-1.png";
+import booktiqo02 from "@/assets/UIUX Projects/BookTiqo/booktiqo-cover (1).png";
+import booktiqo03 from "@/assets/UIUX Projects/BookTiqo/booktiqo-cover-3.png";
+import booktiqo04 from "@/assets/UIUX Projects/BookTiqo/booktiqo-cover-4.png";
+import booktiqo05 from "@/assets/UIUX Projects/BookTiqo/booktiqo-cover-5.png";
+
+// Cellar Visuals
+import cellar01 from "@/assets/UIUX Projects/Cellar/cellar-cover-1.png";
+import cellar02 from "@/assets/UIUX Projects/Cellar/cellar-cover-2.png";
+import cellar03 from "@/assets/UIUX Projects/Cellar/cellar-cover-3.png";
+import cellar04 from "@/assets/UIUX Projects/Cellar/cellar-cover-4.png";
+import cellar05 from "@/assets/UIUX Projects/Cellar/cellar-cover-5.png";
+
+// Landing Templates Visuals
+import template01 from "@/assets/UIUX Projects/Template/landing-cover-1.png";
+import template02 from "@/assets/UIUX Projects/Template/landing-cover-2.png";
+import template03 from "@/assets/UIUX Projects/Template/2.png";
+import template04 from "@/assets/UIUX Projects/Template/landing-cover-4.png";
+import template05 from "@/assets/UIUX Projects/Template/landing-cover-5.png";
+
+
 export type ProjectKind = "work" | "product";
 
 export interface ProjectFeature {
@@ -215,6 +244,192 @@ export const projects: Project[] = [
     url: "https://dwellre.vercel.app/",
     images: [dwellr01, dwellr02, dwellr03, dwellr04, dwellr05]
   },
+  {
+    slug: "lier-pc",
+    kind: "work",
+    title: "Lier PC Rep",
+    subtitle: "IT Repair & Consulting Platform",
+    role: "UI/UX Designer",
+    year: "2025",
+    date: "2025-04-20",
+    summary: "A professional one-page website designed to make tech support feel personal, trustworthy, and accessible for a modern IT brand.",
+    tags: ["UI/UX", "Web", "Service Design", "Consulting"],
+    overview: "Lier PC Rep is an IT repair and consulting brand that needed a digital presence as reliable as their service. The project involved designing a comprehensive one-page website that balances technical authority with a personal, approachable touch. The goal was to simplify the process of getting tech help, from browsing services to booking remote sessions.",
+    problem: [
+      "Traditional IT support websites feel cold, overly technical, and intimidating for non-experts.",
+      "Fragmented service information makes it difficult for users to identify which plan fits their needs.",
+      "High friction in the transition from identifying a problem to initiating a support session."
+    ],
+    solution: "We designed a single-page experience centered on trust and accessibility. By using a clean, professional aesthetic and a clear information hierarchy, we transformed complex service offerings into easy-to-understand plans. The integration of a direct 'Book a Session' flow ensures that users can get help the moment they need it.",
+    keyFeatures: [
+      {
+        title: "Clear Service Breakdown",
+        description: "Modular sections detailing PC repair, consulting, custom builds, and remote support for easy scanning."
+      },
+      {
+        title: "Trust-Focused Pricing Plans",
+        description: "Tiered support plans tailored specifically for individuals, families, and businesses."
+      },
+      {
+        title: "Integrated Remote Session System",
+        description: "One-click access to AnyDesk and TeamViewer sessions, reducing technical hurdles for clients."
+      },
+      {
+        title: "Smooth Single-Page Navigation",
+        description: "Anchor-linked navigation providing a seamless journey from hero section to contact form."
+      },
+      {
+        title: "Professional Visual Identity",
+        description: "A color palette and typography choice that conveys both expertise and friendliness."
+      }
+    ],
+    myRole: [
+      "Designed the end-to-end user experience and visual interface.",
+      "Structured the service hierarchy and pricing model presentation.",
+      "Created the workflow for the integrated ticketing and remote support system.",
+      "Owned the visual storytelling to ensure the brand feels trustworthy and accessible."
+    ],
+    outcome: "The result is a high-converting one-page site that establishes Lier PC as a premium tech partner. The design successfully lowers the barrier for users seeking help, leading to a more efficient support ecosystem.",
+    images: [lier01, lier02, lier03, lier04, lier05]
+  },
+
+
+  {
+    slug: "landing-templates",
+    kind: "work",
+    title: "Landing Page Templates",
+    subtitle: "Multi-Industry Design Foundation",
+    role: "UI/UX Designer",
+    year: "2025",
+    date: "2025-03-15",
+    summary: "A versatile set of 4 unique landing page structures designed to serve as a high-quality foundation for any digital product or service.",
+    tags: ["UI/UX", "Systems", "Web", "Templates"],
+    overview: "In collaboration with a developer, I designed a suite of four landing page templates. The objective was to create a flexible 'starter pack' that maintains high design standards while being easily adaptable across various industries—from SaaS to creative services.",
+    problem: [
+      "Starting every landing page from scratch leads to inconsistent UX and delayed launches.",
+      "Generic templates often lack the narrative structure required for effective product storytelling.",
+      "Difficulty in maintaining visual polish while ensuring layouts are developer-friendly and customizable."
+    ],
+    solution: "I crafted four distinct yet flexible layout structures, each optimized for different conversion goals. These templates prioritize clean typography, logical content flow, and a modular component system that allows for rapid customization without breaking the design's integrity.",
+    keyFeatures: [
+      {
+        title: "4 Unique Layout Structures",
+        description: "Distinct visual directions ranging from minimal-clean to bold-modern to suit different brand voices."
+      },
+      {
+        title: "Story-Driven UX",
+        description: "Pre-structured sections designed to lead the user through a logical conversion funnel."
+      },
+      {
+        title: "Multi-Industry Adaptability",
+        description: "Flexible components that work equally well for software products, services, or personal portfolios."
+      },
+      {
+        title: "Developer-Ready Design",
+        description: "Consistent spacing and grid systems designed for efficient implementation and scalability."
+      }
+    ],
+    myRole: [
+      "Researched high-converting landing page patterns across multiple sectors.",
+      "Designed the visual systems and layout hierarchies for all four templates.",
+      "Built a modular component library for each structure.",
+      "Ensured all designs were optimized for responsive behavior and clear storytelling."
+    ],
+    outcome: "The templates provide a robust design framework that allows for the rapid deployment of professional landing pages, significantly reducing the time-to-market for new projects.",
+    images: [template01, template02, template03, template04, template05]
+  },
+
+  {
+    slug: "cellar",
+    kind: "work",
+    title: "Cellar",
+    subtitle: "Digital Record Shelf & Library",
+    role: "UI/UX Designer",
+    year: "2024",
+    date: "2024-12-10",
+    summary: "A minimalist library platform concept that reimagines digital music storage as a tactile and organized personal record shelf.",
+    tags: ["UI/UX", "Music", "Concept", "Minimalism"],
+    overview: "Cellar is a design concept for a clean, minimal library platform. The goal was to move away from the 'infinite stream' model of modern music apps and return to the feeling of owning a collection. It's designed for people who love to keep their files organized and want a digital experience that feels as intentional as a physical record shelf.",
+    problem: [
+      "Mainstream music platforms focus on algorithmic discovery, often neglecting personal file management.",
+      "Digital music libraries often feel like cluttered folders rather than curated collections.",
+      "The 'ritual' of browsing and rediscovering music has been lost in complex, data-heavy interfaces."
+    ],
+    solution: "Cellar introduces a 'Shelf-First' interface that emphasizes visual covers and minimalist organization. By stripping away distractions, we created a digital space where users can focus on the music they love, making the process of storage and rediscovery simple, tactile, and enjoyable.",
+    keyFeatures: [
+      {
+        title: "Minimalist Record Shelf",
+        description: "A visually-driven layout that treats digital files with the same respect as physical records."
+      },
+      {
+        title: "Frictionless Organization",
+        description: "Intuitive tagging and categorization systems designed for collectors with large libraries."
+      },
+      {
+        title: "Tactile Browsing Experience",
+        description: "An interaction model focused on the joy of browsing and uncovering 'hidden gems' in one's own collection."
+      },
+      {
+        title: "Clean, Focused Aesthetic",
+        description: "A distraction-free UI that lets the album artwork and music take center stage."
+      }
+    ],
+    myRole: [
+      "Conceived the 'Digital Record Shelf' product concept and visual direction.",
+      "Designed the library management system and browsing interactions.",
+      "Prototyped the unique 'shelf' navigation model.",
+      "Created a minimal visual language that resonates with music enthusiasts."
+    ],
+    outcome: "A high-fidelity conceptual project that demonstrates how digital organization can be transformed into a premium, emotionally resonant user experience.",
+    images: [cellar01, cellar02, cellar03, cellar04, cellar05]
+  },
+
+  {
+    slug: "booktiqo",
+    kind: "work",
+    title: "BookTiqo",
+    subtitle: "Secure Student Event Ticketing",
+    role: "UI/UX Designer",
+    year: "2024",
+    date: "2024-10-05",
+    summary: "A digital ticketing platform for university students that eliminates the risks of physical ticket loss and fraud through secure, encoded digital passes.",
+    tags: ["UI/UX", "Education", "Security", "Web"],
+    overview: "BookTiqo was developed to modernize event ticketing in the university space. Traditionally, student events relied on hard-copy tickets which were easily lost or resold. BookTiqo replaces this with a secure digital system, making it easier for students to attend events and for organizers to manage them.",
+    problem: [
+      "Physical tickets are frequently lost, stolen, or damaged, leading to student frustration.",
+      "Unregulated trading of hard-copy tickets creates security risks and pricing issues for organizers.",
+      "The manual printing and distribution of tickets is a massive logistical burden for event owners."
+    ],
+    solution: "I designed a secure digital ticketing ecosystem where passes are uniquely encoded to individual users. This 'digital-first' approach ensures that tickets cannot be lost or traded illicitly, while providing event owners with a streamlined dashboard for ticket creation and real-time verification.",
+    keyFeatures: [
+      {
+        title: "User-Specific Encoded Tickets",
+        description: "Digital passes that are uniquely tied to the student's identity, preventing unauthorized resale."
+      },
+      {
+        title: "Seamless Mobile Wallet",
+        description: "A central location for students to store and access all their upcoming event tickets."
+      },
+      {
+        title: "Event Owner Dashboard",
+        description: "A simplified tool for creating events, managing ticket tiers, and tracking sales data."
+      },
+      {
+        title: "Real-Time Scan & Verify",
+        description: "A fast, reliable verification system for event entry that reduces wait times and human error."
+      }
+    ],
+    myRole: [
+      "Conducted user research with students and event organizers to identify key pain points.",
+      "Designed the end-to-end ticketing flow from purchase to entry.",
+      "Developed the visual identity and mobile-first interface for the platform.",
+      "Collaborated on the security logic for ticket encoding and verification."
+    ],
+    outcome: "Successfully redefined the student event experience by replacing an outdated physical system with a secure, efficient, and user-friendly digital platform.",
+    images: [booktiqo01, booktiqo02, booktiqo03, booktiqo04, booktiqo05]
+  },
+
+
   /*
   {
     slug: "lumen-banking",

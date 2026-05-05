@@ -57,7 +57,7 @@ const PlaceholderTile = ({
       <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
         {hint}
       </p>
-      <p className="mt-1 font-display text-lg text-foreground md:text-xl">{label}</p>
+      <p className="mt-1 font-display text-lg text-foreground tablet:text-xl">{label}</p>
     </div>
   </div>
 );
@@ -135,19 +135,21 @@ const ProjectDetail = ({ kind }: Props) => {
   });
 
   const tileClasses = [
-    "md:col-span-4 md:row-span-2 md:min-h-[480px] aspect-[4/3] md:aspect-auto",
-    "md:col-span-2 aspect-[4/3] md:aspect-auto",
-    "md:col-span-2 aspect-[4/3] md:aspect-auto",
-    "md:col-span-3 aspect-[4/3] md:aspect-auto",
-    "md:col-span-3 aspect-[4/3] md:aspect-auto",
+    "tablet:col-span-4 tablet:row-span-2 tablet:min-h-[480px] aspect-[4/3] tablet:aspect-auto",
+    "tablet:col-span-2 aspect-[4/3] tablet:aspect-auto",
+    "tablet:col-span-2 aspect-[4/3] tablet:aspect-auto",
+    "tablet:col-span-3 aspect-[4/3] tablet:aspect-auto",
+    "tablet:col-span-3 aspect-[4/3] tablet:aspect-auto",
   ];
+
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       <TopNav onBookConsultation={() => setConsultOpen(true)} />
 
-      <article className="pt-32 md:pt-40">
+      <article className="pt-32 tablet:pt-40">
         <div className="container-tight">
+
           <Link
             to="/"
             className="link-underline inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground"
@@ -160,17 +162,18 @@ const ProjectDetail = ({ kind }: Props) => {
             <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
               {isProduct ? "Built product" : "Selected work"} · {project.year}
             </p>
-            <h1 className="mt-8 max-w-4xl font-display text-4xl font-medium leading-[1.05] md:text-6xl lg:text-7xl">
+            <h1 className="mt-8 max-w-4xl font-display text-4xl font-medium leading-[1.05] tablet:text-6xl lg:text-7xl">
               {project.title}
             </h1>
             {project.subtitle && (
-              <p className="mt-4 font-display text-xl text-muted-foreground md:text-2xl">
+              <p className="mt-4 font-display text-xl text-muted-foreground tablet:text-2xl">
                 {project.subtitle}
               </p>
             )}
-            <p className="mt-10 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p className="mt-10 max-w-2xl text-base leading-relaxed text-muted-foreground tablet:text-lg">
               {project.summary}
             </p>
+
 
             {isProduct && project.url && (
               <a
@@ -185,7 +188,8 @@ const ProjectDetail = ({ kind }: Props) => {
             )}
           </div>
 
-          <div className="reveal mt-16 grid gap-8 border-y border-border py-8 text-xs uppercase tracking-[0.18em] md:grid-cols-4">
+          <div className="reveal mt-16 grid gap-8 border-y border-border py-8 text-xs uppercase tracking-[0.18em] tablet:grid-cols-4">
+
             <div>
               <p className="text-muted-foreground">Role</p>
               <p className="mt-2 text-foreground">{project.role}</p>
@@ -215,17 +219,18 @@ const ProjectDetail = ({ kind }: Props) => {
         </div>
 
         {/* Bento grid */}
-        <div className="container-tight mt-20 md:mt-24">
+        <div className="container-tight mt-20 tablet:mt-24">
           <div className="reveal mb-8 flex items-end justify-between">
             <p className="font-mono text-xs uppercase tracking-[0.22em] text-muted-foreground">
               Visual tour
             </p>
-            <p className="hidden text-xs text-muted-foreground md:block">
+            <p className="hidden text-xs text-muted-foreground tablet:block">
               5 selected views
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:grid-rows-2 md:gap-5 md:[grid-auto-rows:minmax(220px,auto)]">
+          <div className="grid grid-cols-1 gap-4 tablet:grid-cols-6 tablet:grid-rows-2 tablet:gap-5 tablet:[grid-auto-rows:minmax(220px,auto)]">
+
             {tiles.map((tile, i) => (
               <div key={i} className={`reveal ${tileClasses[i]}`}>
                 {tile.type === "image" ? (
@@ -247,22 +252,23 @@ const ProjectDetail = ({ kind }: Props) => {
         </div>
 
         {/* Structured case study */}
-        <div className="container-tight mt-24 grid gap-16 md:grid-cols-12 md:gap-24">
-          <aside className="md:col-span-4">
+        <div className="container-tight mt-24 grid gap-16 tablet:grid-cols-12 tablet:gap-24">
+          <aside className="tablet:col-span-4">
             <p className="sticky top-28 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
               Case study
             </p>
           </aside>
 
-          <div className="space-y-20 md:col-span-8">
+          <div className="space-y-20 tablet:col-span-8">
             <section className="reveal">
-              <h2 className="font-display text-2xl text-foreground md:text-3xl">
+              <h2 className="font-display text-2xl text-foreground tablet:text-3xl">
                 Overview
               </h2>
-              <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground tablet:text-lg">
                 {project.overview}
               </p>
             </section>
+
 
             {project.problem.length > 0 && (
               <section className="reveal">
@@ -294,10 +300,10 @@ const ProjectDetail = ({ kind }: Props) => {
 
             {project.keyFeatures.length > 0 && (
               <section className="reveal">
-                <h2 className="font-display text-2xl text-foreground md:text-3xl">
+                <h2 className="font-display text-2xl text-foreground tablet:text-3xl">
                   Key features
                 </h2>
-                <div className="mt-8 grid gap-px bg-border md:grid-cols-2">
+                <div className="mt-8 grid gap-px bg-border tablet:grid-cols-2">
                   {project.keyFeatures.map((f, i) => (
                     <div key={i} className="bg-background p-6">
                       <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-primary">
@@ -314,6 +320,7 @@ const ProjectDetail = ({ kind }: Props) => {
                 </div>
               </section>
             )}
+
 
             {project.myRole.length > 0 && (
               <section className="reveal">
@@ -339,23 +346,24 @@ const ProjectDetail = ({ kind }: Props) => {
                 Outcome
               </h2>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
+              <p className="mt-6 text-base leading-relaxed text-muted-foreground tablet:text-lg">
                 {project.outcome}
               </p>
             </section>
 
             {isProduct && project.url && (
-              <section className="reveal border border-border bg-card/40 p-8 md:p-10">
+              <section className="reveal border border-border bg-card/40 p-8 tablet:p-10">
                 <p className="font-mono text-xs uppercase tracking-[0.22em] text-muted-foreground">
                   See it live
                 </p>
-                <h3 className="mt-4 font-display text-2xl leading-tight md:text-3xl">
+                <h3 className="mt-4 font-display text-2xl leading-tight tablet:text-3xl">
                   This one's actually shipped — go poke at it.
                 </h3>
                 <a
                   href={project.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="group mt-6 inline-flex items-center gap-3 border border-foreground px-5 py-3 text-[11px] uppercase tracking-[0.22em] text-foreground transition-colors hover:bg-foreground hover:text-background"
+                  className="group mt-6 inline-flex items-center gap-3 border border-foreground px-5 py-3 text-[11px] uppercase tracking-[0.22em] text-foreground transition-all hover:bg-transparent hover:text-foreground"
                 >
                   View project live
                   <ExternalLink className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -373,31 +381,32 @@ const ProjectDetail = ({ kind }: Props) => {
                 <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
                   More {isProduct ? "shipped products" : "UI/UX work"}
                 </p>
-                <h2 className="mt-4 font-display text-3xl font-medium leading-tight md:text-5xl">
+                <h2 className="mt-4 font-display text-3xl font-medium leading-tight tablet:text-5xl">
                   Keep exploring.
                 </h2>
               </div>
               <Link
                 to={`/projects?type=${isProduct ? "product" : "work"}`}
-                className="link-underline hidden items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground md:inline-flex"
+                className="link-underline hidden items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground tablet:inline-flex"
               >
                 View all <ArrowUpRight className="h-3.5 w-3.5" />
               </Link>
             </div>
 
-            <div className="mt-12 grid gap-px bg-border md:grid-cols-3">
+            <div className="mt-12 grid gap-px bg-border tablet:grid-cols-3">
               {moreProjects.map((p) => (
                 <Link
                   key={p.slug}
                   to={`${basePath}/${p.slug}`}
-                  className="group block bg-background p-6 transition-colors hover:bg-card md:p-8"
+                  className="group block bg-background p-6 transition-colors hover:bg-card tablet:p-8"
                 >
                   <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
                     {p.year} · {p.tags[0]}
                   </p>
-                  <h3 className="mt-6 font-display text-xl text-foreground md:text-2xl">
+                  <h3 className="mt-6 font-display text-xl text-foreground tablet:text-2xl">
                     {p.title}
                   </h3>
+
                   <p className="mt-3 line-clamp-2 text-sm text-muted-foreground">
                     {p.summary}
                   </p>
@@ -413,10 +422,11 @@ const ProjectDetail = ({ kind }: Props) => {
 
             <Link
               to={`/projects?type=${isProduct ? "product" : "work"}`}
-              className="link-underline mt-10 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground md:hidden"
+              className="link-underline mt-10 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground tablet:hidden"
             >
               View all <ArrowUpRight className="h-3.5 w-3.5" />
             </Link>
+
           </div>
         )}
       </article>

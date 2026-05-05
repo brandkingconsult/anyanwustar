@@ -79,12 +79,13 @@ export const Hero = ({ onBookConsultation }: HeroProps) => {
         {/* Headline — sits behind image */}
         <div className="pointer-events-none absolute inset-x-0 top-[8%] z-10 flex flex-col items-start justify-center px-6 text-left md:items-center md:text-center md:top-[12%] md:px-4">
           <h1
-            className="hero-anim-text font-display font-semibold leading-[1] tracking-tight text-foreground/[0.18] md:leading-[0.95] text-[60px] md:text-[100px] lg:text-[125px]"
+            className="hero-anim-text font-display font-semibold leading-[1] tracking-tight text-foreground/[0.18] md:leading-[0.95] text-[48px] sm:text-[64px] tablet:text-[100px] lg:text-[125px]"
           >
             Start Your Brand
             <br />
             with <TypingWord />
           </h1>
+
         </div>
 
         {/* Hero image — luminous by default, true color on hover (desktop) */}
@@ -130,7 +131,8 @@ export const Hero = ({ onBookConsultation }: HeroProps) => {
         <a
           href="/star-resume.pdf"
           download="Star-Anyanwu-Resume.pdf"
-          className="absolute right-3 top-3 z-30 inline-flex items-center gap-1.5 border border-border bg-background/40 px-2.5 py-1.5 text-[10px] uppercase tracking-[0.18em] text-foreground backdrop-blur-md transition-colors hover:bg-background/70 md:hidden"
+          className="absolute right-3 top-3 z-30 inline-flex items-center gap-1.5 border border-border bg-background/40 px-2.5 py-1.5 text-[10px] uppercase tracking-[0.18em] text-foreground backdrop-blur-md transition-colors hover:bg-background/70 tablet:hidden"
+
           aria-label="Download resume"
         >
           <Download className="h-3 w-3" />

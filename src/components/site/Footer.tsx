@@ -3,7 +3,7 @@ import { Download } from "lucide-react";
 export const Footer = () => {
   return (
     <footer className="hairline mt-32">
-      <div className="container-tight flex flex-col gap-6 py-12 md:flex-row md:items-center md:justify-between">
+      <div className="container-tight flex flex-col gap-10 py-12 tablet:flex-row tablet:items-center tablet:justify-between">
         <div className="flex items-center gap-3">
           <span
             aria-hidden
@@ -21,7 +21,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+        <div className="flex flex-col items-start gap-4 text-xs uppercase tracking-[0.18em] text-muted-foreground tablet:flex-row tablet:items-center tablet:gap-x-6 tablet:gap-y-3">
           <a href="mailto:brandkingconsult@gmail.com" className="link-underline hover:text-foreground">
             brandkingconsult@gmail.com
           </a>
@@ -33,12 +33,26 @@ export const Footer = () => {
             <Download className="h-3 w-3" />
             Resume
           </a>
-          <a href="#" className="link-underline hover:text-foreground">
+          <a
+            href="https://www.linkedin.com/in/anyanwu-soroudochi/"
+            target="_blank"
+            rel="noreferrer"
+            className="link-underline hover:text-foreground"
+          >
             LinkedIn
           </a>
-          <span>© {new Date().getFullYear()}</span>
+          <a
+            href="https://x.com/anyanwu_star19"
+            target="_blank"
+            rel="noreferrer"
+            className="link-underline hover:text-foreground"
+          >
+            Twitter (X)
+          </a>
+          <span className="pt-2 tablet:pt-0">© {new Date().getFullYear()}</span>
         </div>
       </div>
+
     </footer>
   );
 };

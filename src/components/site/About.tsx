@@ -6,16 +6,16 @@ const disciplines = [
 
 export const About = () => {
   return (
-    <section id="about" className="py-32 md:py-40">
-      <div className="container-tight grid gap-16 md:grid-cols-12">
-        <div className="reveal md:col-span-7">
+    <section id="about" className="py-32 tablet:py-40">
+      <div className="container-tight grid gap-16 tablet:grid-cols-12">
+        <div className="reveal tablet:col-span-7">
           <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
             01 — About
           </p>
-          <h2 className="mt-6 font-display text-3xl font-medium leading-tight md:text-5xl">
+          <h2 className="mt-6 font-display text-3xl font-medium leading-tight tablet:text-5xl">
             I think in systems and ship in weeks.
           </h2>
-          <div className="mt-10 space-y-6 text-base leading-relaxed text-muted-foreground md:text-lg">
+          <div className="mt-10 space-y-6 text-base leading-relaxed text-muted-foreground tablet:text-lg">
             <p>
               I work at the intersection of design, product, and business. My
               practice started in interface design — the discipline of making
@@ -31,7 +31,8 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="md:col-span-5">
+        <div className="tablet:col-span-5">
+
           <ul className="hairline">
             {disciplines.map((d, i) => (
               <li
