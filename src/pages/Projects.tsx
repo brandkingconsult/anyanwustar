@@ -3,7 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ArrowUpRight, Search, LayoutGrid, Rows3, X } from "lucide-react";
 import { TopNav } from "@/components/site/TopNav";
 import { Footer } from "@/components/site/Footer";
-import { ConsultationModal } from "@/components/site/ConsultationModal";
+import { StrategyCallModal } from "@/components/site/StrategyCallModal";
 import { FloatingActions } from "@/components/site/FloatingActions";
 import { projects, type ProjectKind } from "@/data/projects";
 import { useReveal } from "@/hooks/use-reveal";
@@ -15,13 +15,13 @@ type ViewMode = "grid" | "list";
 const TYPE_LABELS: Record<FilterType, string> = {
   all: "All",
   work: "UI/UX Work",
-  product: "Built Products",
+  product: "Case Studies",
 };
 
 const SORT_LABELS: Record<SortKey, string> = {
   newest: "Newest first",
   oldest: "Oldest first",
-  az: "A — Z",
+  az: "A to Z",
 };
 
 const Projects = () => {
@@ -36,7 +36,7 @@ const Projects = () => {
   const [view, setView] = useState<ViewMode>("grid");
 
   useEffect(() => {
-    document.title = "All Projects — Star";
+    document.title = "All Projects; Star";
   }, []);
 
   // sync ?type= into URL
@@ -78,7 +78,7 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <TopNav onBookConsultation={() => setConsultOpen(true)} />
+      <TopNav onBookStrategyCall={() => setConsultOpen(true)} />
 
       <main className="pt-32 tablet:pt-40">
         <div className="container-tight">
@@ -90,7 +90,7 @@ const Projects = () => {
               Every project, in one place.
             </h1>
             <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground tablet:text-lg">
-              Search across UI/UX work and shipped products. Filter by type, sort by date or name.
+              Search across UI/UX work and case studies. Filter by type, sort by date or name.
             </p>
           </div>
         </div>
@@ -108,7 +108,7 @@ const Projects = () => {
                   type="search"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
-                  placeholder="Search projects, tags, role…"
+                  placeholder="Search projects, tags, role..."
                   className="w-full border border-border bg-foreground/[0.03] py-2.5 pl-10 pr-10 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground/70 focus:border-foreground/40"
                 />
                 {query && (
@@ -236,7 +236,7 @@ const Projects = () => {
 
                     <div className="flex items-center justify-between">
                       <span className="border border-border px-2 py-0.5 text-[9px] uppercase tracking-[0.22em] text-muted-foreground">
-                        {p.kind === "work" ? "UI/UX" : "Product"}
+                        {p.kind === "work" ? "UI/UX" : "Case Study"}
                       </span>
                       <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
                         {p.year}
@@ -292,7 +292,7 @@ const Projects = () => {
                       {p.tags.slice(0, 2).join(" · ")}
                     </span>
                     <span className="col-span-5 hidden text-right text-[10px] uppercase tracking-[0.22em] text-muted-foreground tablet:col-span-1 tablet:block">
-                      {p.kind === "work" ? "UI/UX" : "Product"}
+                      {p.kind === "work" ? "UI/UX" : "Case Study"}
                     </span>
 
                     <ArrowUpRight className="col-span-1 h-5 w-5 justify-self-end text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
@@ -305,7 +305,7 @@ const Projects = () => {
       </main>
 
       <Footer />
-      <ConsultationModal open={consultOpen} onOpenChange={setConsultOpen} />
+      <StrategyCallModal open={consultOpen} onOpenChange={setConsultOpen} />
       <FloatingActions />
     </div>
   );

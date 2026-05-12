@@ -234,7 +234,7 @@
     animation: hero-rise 800ms cubic-bezier(0.22, 1, 0.36, 1) 850ms both;
   }
 
-  /* Hero portrait — luminous by default, true color on hover (desktop only) */
+  /* Hero portrait: luminous by default, true color on hover (desktop only) */
   .hero-portrait {
     width: min(115vw, 1100px);
     max-width: none;

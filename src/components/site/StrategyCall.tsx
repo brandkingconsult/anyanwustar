@@ -1,39 +1,39 @@
 import { ArrowUpRight } from "lucide-react";
 
 const includes = [
-  "60-minute working session",
-  "Audit of your current digital presence",
-  "Concrete, prioritized recommendations",
-  "Follow-up note within 48 hours",
+  "30-minute strategy session",
+  "Website-specific business audit",
+  "Immediate strategic insights",
+  "Project roadmap alignment",
 ];
 
-interface ConsultationProps {
+interface StrategyCallProps {
   onBook: () => void;
 }
 
-export const Consultation = ({ onBook }: ConsultationProps) => {
+export const StrategyCall = ({ onBook }: StrategyCallProps) => {
   return (
-    <section id="consultation" className="py-32 md:py-40">
+    <section id="strategy-call" className="py-32 md:py-40">
       <div className="container-tight">
         <div className="grid gap-16 md:grid-cols-12">
           <div className="reveal md:col-span-6">
             <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
-              06 — Consultation
+              06; Strategy Call
             </p>
             <h2 className="mt-6 font-display text-3xl font-medium leading-tight md:text-5xl">
-              A strategic consultation for businesses serious about clarity.
+              A high-impact strategy call for immediate digital clarity.
             </h2>
             <p className="mt-8 max-w-md text-sm leading-relaxed text-muted-foreground md:text-base">
-              An optional one-off engagement for teams who suspect their site,
-              product, or digital presence is leaving real value on the table.
-              No retainer pitch. Just direct, useful, honest work — from me.
+              A focused 30-minute introductory session to audit your current website 
+              and identify exactly how we can better your business. This call happens 
+              before we begin development; ensuring we're aligned on the right problems to solve.
             </p>
 
             <button
               onClick={onBook}
               className="group mt-10 inline-flex items-center gap-3 border border-foreground px-6 py-3 text-xs uppercase tracking-[0.2em] text-foreground transition-colors hover:bg-foreground hover:text-background"
             >
-              Request consultation
+              Book strategy call
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </button>
           </div>

@@ -3,7 +3,7 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
 import { TopNav } from "@/components/site/TopNav";
 import { Footer } from "@/components/site/Footer";
-import { ConsultationModal } from "@/components/site/ConsultationModal";
+import { StrategyCallModal } from "@/components/site/StrategyCallModal";
 import { FloatingActions } from "@/components/site/FloatingActions";
 import { findProject, projects, type ProjectKind } from "@/data/projects";
 import { useReveal } from "@/hooks/use-reveal";
@@ -101,7 +101,7 @@ const ProjectDetail = ({ kind }: Props) => {
 
   useEffect(() => {
     if (project) {
-      document.title = `${project.title} — Star`;
+      document.title = `${project.title}; Star`;
     }
     window.scrollTo({ top: 0 });
   }, [project]);
@@ -145,7 +145,7 @@ const ProjectDetail = ({ kind }: Props) => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <TopNav onBookConsultation={() => setConsultOpen(true)} />
+      <TopNav onBookStrategyCall={() => setConsultOpen(true)} />
 
       <article className="pt-32 tablet:pt-40">
         <div className="container-tight">
@@ -160,7 +160,7 @@ const ProjectDetail = ({ kind }: Props) => {
 
           <div className="reveal mt-12">
             <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
-              {isProduct ? "Built product" : "Selected work"} · {project.year}
+              {isProduct ? "Case study" : "Selected work"} · {project.year}
             </p>
             <h1 className="mt-8 max-w-4xl font-display text-4xl font-medium leading-[1.05] tablet:text-6xl lg:text-7xl">
               {project.title}
@@ -236,7 +236,7 @@ const ProjectDetail = ({ kind }: Props) => {
                 {tile.type === "image" ? (
                   <ImageTile
                     src={tile.src}
-                    alt={`${project.title} — view ${i + 1}`}
+                    alt={`${project.title}: view ${i + 1}`}
                     className="h-full w-full"
                   />
                 ) : (
@@ -358,7 +358,7 @@ const ProjectDetail = ({ kind }: Props) => {
                   See it live
                 </p>
                 <h3 className="mt-4 font-display text-2xl leading-tight tablet:text-3xl">
-                  This one's actually shipped — go poke at it.
+                  This solution is live and functional; explore it in the real world.
                 </h3>
                 <a
                   href={project.url}
@@ -380,7 +380,7 @@ const ProjectDetail = ({ kind }: Props) => {
             <div className="reveal flex items-end justify-between gap-6">
               <div>
                 <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
-                  More {isProduct ? "shipped products" : "UI/UX work"}
+                  More {isProduct ? "case studies" : "UI/UX work"}
                 </p>
                 <h2 className="mt-4 font-display text-3xl font-medium leading-tight tablet:text-5xl">
                   Keep exploring.
@@ -433,7 +433,7 @@ const ProjectDetail = ({ kind }: Props) => {
       </article>
 
       <Footer />
-      <ConsultationModal open={consultOpen} onOpenChange={setConsultOpen} />
+      <StrategyCallModal open={consultOpen} onOpenChange={setConsultOpen} />
       <FloatingActions />
     </div>
   );

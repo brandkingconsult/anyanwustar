@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ArrowLeft, ArrowUpRight, Quote, Search } from "lucide-react";
 import { TopNav } from "@/components/site/TopNav";
 import { Footer } from "@/components/site/Footer";
-import { ConsultationModal } from "@/components/site/ConsultationModal";
+import { StrategyCallModal } from "@/components/site/StrategyCallModal";
 import { FloatingActions } from "@/components/site/FloatingActions";
 import { useReveal } from "@/hooks/use-reveal";
 import { testimonials } from "@/data/testimonials";
@@ -17,7 +17,7 @@ const Testimonials = () => {
   const [sortOrder, setSortOrder] = useState<"newest" | "oldest">("newest");
 
   useEffect(() => {
-    document.title = "Testimonials — Star";
+    document.title = "Testimonials; Star";
     window.scrollTo({ top: 0 });
   }, []);
 
@@ -60,7 +60,7 @@ const Testimonials = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <TopNav onBookConsultation={() => setConsultOpen(true)} />
+      <TopNav onBookStrategyCall={() => setConsultOpen(true)} />
 
       <main className="pt-32 md:pt-40">
         <section className="container-tight">
@@ -81,7 +81,7 @@ const Testimonials = () => {
             </h1>
             <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
               Every founder below started with a real problem. These pages tell
-              the full arc — the friction they were stuck in, the work we did
+              the full arc: the friction they were stuck in, the work we did
               together, and where they landed on the other side.
             </p>
           </div>
@@ -93,7 +93,7 @@ const Testimonials = () => {
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search by founder, role, or keyword…"
+                placeholder="Search by founder, role, or keyword..."
                 className="w-full border border-border bg-transparent py-3 pl-10 pr-4 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none"
               />
             </div>
@@ -111,7 +111,7 @@ const Testimonials = () => {
           </div>
 
 
-          {/* Stories — newest first */}
+          {/* Stories: newest first */}
           <div className="mt-16 space-y-24 md:mt-24 md:space-y-32">
             {filtered.length === 0 && (
               <p className="text-sm text-muted-foreground">
@@ -198,7 +198,7 @@ const Testimonials = () => {
               onClick={() => setConsultOpen(true)}
               className="group mt-8 inline-flex items-center gap-3 bg-primary px-6 py-3 text-[11px] uppercase tracking-[0.22em] text-primary-foreground transition-all hover:bg-primary/90"
             >
-              Book a consultation
+              Book a strategy call
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </button>
           </div>
@@ -206,7 +206,7 @@ const Testimonials = () => {
       </main>
 
       <Footer />
-      <ConsultationModal open={consultOpen} onOpenChange={setConsultOpen} />
+      <StrategyCallModal open={consultOpen} onOpenChange={setConsultOpen} />
       <FloatingActions />
     </div>
   );

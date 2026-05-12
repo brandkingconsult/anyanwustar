@@ -113,7 +113,7 @@ const Overview = () => (
       <div className="bg-background"><Stat label="Total projects" value="7" hint="4 work · 3 product" /></div>
       <div className="bg-background"><Stat label="Inquiries · 30d" value="12" hint="+3 vs prior period" /></div>
       <div className="bg-background"><Stat label="Profile views" value="2,418" hint="+18% vs prior period" /></div>
-      <div className="bg-background"><Stat label="Consultations" value="3" hint="Booked this month" /></div>
+      <div className="bg-background"><Stat label="Strategy Calls" value="3" hint="Booked this month" /></div>
     </div>
 
     <div className="border border-border">
@@ -123,8 +123,8 @@ const Overview = () => (
       </div>
       <ul className="divide-y divide-border text-sm">
         {[
-          ["New inquiry", "Mira K. — Fintech consultation", "2h ago"],
-          ["Project updated", "Lumen — Mobile Banking", "Yesterday"],
+          ["New inquiry", "Mira K.; Fintech strategy call", "2h ago"],
+          ["Project updated", "Lumen; Mobile Banking", "Yesterday"],
           ["Inquiry replied", "Daniel R.", "2 days ago"],
           ["Project created", "Signal", "Last week"],
         ].map(([a, b, c]) => (
@@ -349,7 +349,7 @@ const Field = ({
 /* ---------------- Inquiries ---------------- */
 
 const seedInquiries = [
-  { id: 1, name: "Mira K.", email: "mira@northbeam.io", topic: "Consultation", status: "new", date: "Today" },
+  { id: 1, name: "Mira K.", email: "mira@northbeam.io", topic: "Strategy Call", status: "new", date: "Today" },
   { id: 2, name: "Daniel R.", email: "daniel@field.studio", topic: "Product build", status: "replied", date: "Yesterday" },
   { id: 3, name: "Imani O.", email: "imani@atlashealth.io", topic: "UI/UX engagement", status: "new", date: "2 days ago" },
   { id: 4, name: "Theo P.", email: "theo@ledgerlite.app", topic: "Partnership", status: "archived", date: "Last week" },

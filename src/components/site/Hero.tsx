@@ -3,7 +3,7 @@ import { Download } from "lucide-react";
 import heroImage from "@/assets/star-hero.png";
 
 interface HeroProps {
-  onBookConsultation: () => void;
+  onBookStrategyCall: () => void;
 }
 
 const ROTATING_WORDS = ["Clarity", "Vision", "Direction"];
@@ -54,7 +54,7 @@ const TypingWord = () => {
   );
 };
 
-export const Hero = ({ onBookConsultation }: HeroProps) => {
+export const Hero = ({ onBookStrategyCall }: HeroProps) => {
   return (
     <section
       id="home"
@@ -76,7 +76,7 @@ export const Hero = ({ onBookConsultation }: HeroProps) => {
           }}
         />
 
-        {/* Headline — sits behind image */}
+        {/* Headline: sits behind image */}
         <div className="pointer-events-none absolute inset-x-0 top-[8%] z-10 flex flex-col items-start justify-center px-6 text-left md:items-center md:text-center md:top-[12%] md:px-4">
           <h1
             className="hero-anim-text font-display font-semibold leading-[1] tracking-tight text-foreground/[0.18] md:leading-[0.95] text-[48px] sm:text-[64px] tablet:text-[100px] lg:text-[125px]"
@@ -88,11 +88,11 @@ export const Hero = ({ onBookConsultation }: HeroProps) => {
 
         </div>
 
-        {/* Hero image — luminous by default, true color on hover (desktop) */}
+        {/* Hero image: luminous by default, true color on hover (desktop) */}
         <div className="hero-anim-image group pointer-events-auto absolute inset-x-0 bottom-0 z-20 flex w-full justify-center overflow-hidden">
           <img
             src={heroImage}
-            alt="Star — designer, founder, and product builder at his desk"
+            alt="Star: designer, founder, and product builder at his desk"
             className="hero-portrait mx-auto block h-auto select-none object-contain"
             loading="eager"
             decoding="async"
@@ -109,14 +109,14 @@ export const Hero = ({ onBookConsultation }: HeroProps) => {
           }}
         />
 
-        {/* CTA buttons — stacked on mobile (16px gap), inline on desktop */}
+        {/* CTA buttons: stacked on mobile (16px gap), inline on desktop */}
         <div className="hero-anim-cta absolute inset-x-0 bottom-5 z-30 flex w-full items-center justify-center px-4 md:bottom-10">
           <div className="flex w-full max-w-md flex-col items-stretch justify-center gap-4 md:max-w-none md:w-auto md:flex-row md:gap-3">
             <button
-              onClick={onBookConsultation}
+              onClick={onBookStrategyCall}
               className="bg-primary px-6 py-3.5 text-center text-sm font-medium text-primary-foreground shadow-[0_10px_30px_-10px_hsl(var(--primary)/0.6)] transition-all hover:bg-primary/90 hover:shadow-[0_14px_36px_-10px_hsl(var(--primary)/0.7)] md:py-3"
             >
-              Book a 30 mins Consultation
+              Book a 30 mins Strategy Call
             </button>
             <a
               href="#work"

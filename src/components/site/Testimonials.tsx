@@ -41,7 +41,7 @@ export const Testimonials = () => {
         <div className="reveal flex flex-col gap-6 tablet:flex-row tablet:items-end tablet:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
-              07 — Said about the work
+              07; Said about the work
             </p>
             <h2 className="mt-6 max-w-xl font-display text-3xl font-medium leading-tight tablet:text-5xl">
               Words from the founders I've shipped with.
@@ -49,7 +49,7 @@ export const Testimonials = () => {
           </div>
           <div className="flex flex-col gap-4 tablet:items-end">
             <p className="max-w-sm text-sm text-muted-foreground">
-              Real notes from real teams — written after we shipped together.
+              Real notes from real teams; written after we shipped together.
             </p>
             <Link
               to="/testimonials"
@@ -62,7 +62,7 @@ export const Testimonials = () => {
         </div>
       </div>
 
-      {/* Horizontal carousel — auto-marquee + manual scroll */}
+      {/* Horizontal carousel; auto-marquee + manual scroll */}
       <div
         className="reveal mt-16"
         style={{

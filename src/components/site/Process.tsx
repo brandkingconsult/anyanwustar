@@ -2,7 +2,7 @@ const steps = [
   {
     n: "01",
     title: "Listen for the actual problem",
-    body: "Most briefs describe a symptom. I dig until we agree on the actual problem — usually it's clarity, not surface.",
+    body: "Most briefs describe a symptom. I dig until we agree on the actual problem: usually it's clarity, not surface.",
   },
   {
     n: "02",
@@ -27,10 +27,10 @@ export const Process = () => {
       <div className="container-tight">
         <div className="reveal">
           <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
-            04 — Process
+            04; Process
           </p>
           <h2 className="mt-6 max-w-3xl font-display text-3xl font-medium leading-tight tablet:text-5xl">
-            How I think — and how the work actually gets made.
+            How I think; and how the work actually gets made.
           </h2>
         </div>
 

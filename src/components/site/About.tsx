@@ -1,6 +1,6 @@
 const disciplines = [
   { label: "Design", desc: "Interface systems, product surfaces, end-to-end UX." },
-  { label: "Build", desc: "Real, shipped products via AI-assisted development." },
+  { label: "Build", desc: "Real, functional solutions via AI-assisted development." },
   { label: "Strategy", desc: "Digital presence, structure, and business clarity." },
 ];
 
@@ -10,7 +10,7 @@ export const About = () => {
       <div className="container-tight grid gap-16 tablet:grid-cols-12">
         <div className="reveal tablet:col-span-7">
           <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
-            01 — About
+            01; About
           </p>
           <h2 className="mt-6 font-display text-3xl font-medium leading-tight tablet:text-5xl">
             I think in systems and ship in weeks.
@@ -18,14 +18,14 @@ export const About = () => {
           <div className="mt-10 space-y-6 text-base leading-relaxed text-muted-foreground tablet:text-lg">
             <p>
               I work at the intersection of design, product, and business. My
-              practice started in interface design — the discipline of making
-              complex systems feel obvious — and grew into building the actual
+              practice started in interface design: the discipline of making
+              complex systems feel obvious; and grew into building the actual
               products around them.
             </p>
             <p>
               Today, I help founders and teams clarify their digital presence,
               design the experience, and ship the product. No drawn-out
-              hand-offs. No template work. Just direct, intentional craft —
+              hand-offs. No template work. Just direct, intentional craft;
               delivered fast.
             </p>
           </div>

@@ -10,14 +10,14 @@ import { toast } from "sonner";
 // Calendly event link
 const CALENDLY_URL = "https://calendly.com/brandkingconsult/brand-discovery-call-30-minutes";
 
-interface ConsultationModalProps {
+interface StrategyCallModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
 
-const focuses = ["UI/UX Design", "Product Build", "Digital Strategy", "Audit / Other"];
+const focuses = ["UI/UX Design", "Product Build", "Digital Strategy", "Website Audit / Other"];
 
-export const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps) => {
+export const StrategyCallModal = ({ open, onOpenChange }: StrategyCallModalProps) => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -43,7 +43,7 @@ export const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps
       toast.error("Please pick a preferred date.");
       return;
     }
-    // Build Calendly prefilled URL — opens Calendly in new tab so user finalizes the slot
+    // Build Calendly prefilled URL; opens Calendly in new tab so user finalizes the slot
     const params = new URLSearchParams({
       name,
       email,
@@ -70,10 +70,10 @@ export const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps
         <div className="flex items-center justify-between border-b border-border px-6 py-4 tablet:px-8">
           <div>
             <p className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-              Consultation · 30 minutes
+              Strategy Call · 30 minutes
             </p>
             <p className="mt-1 font-display text-base text-foreground tablet:text-lg">
-              Book a working session with me
+              Get strategic insights for your business
             </p>
           </div>
           <button
@@ -214,7 +214,7 @@ export const ConsultationModal = ({ open, onOpenChange }: ConsultationModalProps
                     else setNotes(words.slice(0, 120).join(" "));
                   }}
                   className="hero-input resize-none"
-                  placeholder="Context, links, the actual problem you're trying to solve…"
+                  placeholder="Context, links, the strategic challenge you're facing..."
                 />
                 <p className="mt-1 text-right text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
                   {notes.trim() ? notes.trim().split(/\s+/).length : 0} / 120 words

@@ -11,10 +11,10 @@ const navLinks = [
 ];
 
 interface TopNavProps {
-  onBookConsultation: () => void;
+  onBookStrategyCall: () => void;
 }
 
-export const TopNav = ({ onBookConsultation }: TopNavProps) => {
+export const TopNav = ({ onBookStrategyCall }: TopNavProps) => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -83,10 +83,10 @@ export const TopNav = ({ onBookConsultation }: TopNavProps) => {
             Resume
           </a>
           <button
-            onClick={onBookConsultation}
+            onClick={onBookStrategyCall}
             className="bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Contact Me
+            Book Strategy Call
           </button>
         </div>
 
@@ -160,11 +160,11 @@ export const TopNav = ({ onBookConsultation }: TopNavProps) => {
             <button
               onClick={() => {
                 close();
-                onBookConsultation();
+                onBookStrategyCall();
               }}
               className="bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
-              Book Consultation
+              Book Strategy Call
             </button>
           </div>
         </div>

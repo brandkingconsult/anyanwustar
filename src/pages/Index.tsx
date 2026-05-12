@@ -6,11 +6,11 @@ import { About } from "@/components/site/About";
 import { ProjectCarousel } from "@/components/site/ProjectCarousel";
 import { Process } from "@/components/site/Process";
 import { Services } from "@/components/site/Services";
-import { Consultation } from "@/components/site/Consultation";
+import { StrategyCall } from "@/components/site/StrategyCall";
 import { Testimonials } from "@/components/site/Testimonials";
 import { FAQ } from "@/components/site/FAQ";
 import { Contact } from "@/components/site/Contact";
-import { ConsultationModal } from "@/components/site/ConsultationModal";
+import { StrategyCallModal } from "@/components/site/StrategyCallModal";
 import { FloatingActions } from "@/components/site/FloatingActions";
 import { useReveal } from "@/hooks/use-reveal";
 import { workProjects, productProjects } from "@/data/projects";
@@ -20,7 +20,7 @@ const Index = () => {
   const [consultOpen, setConsultOpen] = useState(false);
 
   useEffect(() => {
-    document.title = "Star — Designer, Founder, Product Builder";
+    document.title = "Star; Designer, Founder, Product Builder";
     const desc =
       "Star designs interfaces, builds real products with AI-assisted development, and helps businesses sharpen their digital presence.";
     let meta = document.querySelector('meta[name="description"]');
@@ -34,9 +34,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <TopNav onBookConsultation={() => setConsultOpen(true)} />
+      <TopNav onBookStrategyCall={() => setConsultOpen(true)} />
       <main>
-        <Hero onBookConsultation={() => setConsultOpen(true)} />
+        <Hero onBookStrategyCall={() => setConsultOpen(true)} />
         <About />
         <ProjectCarousel
           id="work"
@@ -51,22 +51,22 @@ const Index = () => {
         <ProjectCarousel
           id="products"
           index="03"
-          eyebrow="Built products"
-          title="Real products I've shipped — not concepts in a deck."
-          description="Founder-built and client products I've taken end-to-end with AI-assisted development."
+          eyebrow="Case Studies"
+          title="Purposeful products built to solve real problems."
+          description="Independent case studies where I identify a functional gap and build a professional solution from zero to one."
           basePath="/products"
           items={productProjects}
           direction="right"
         />
         <Process />
         <Services />
-        <Consultation onBook={() => setConsultOpen(true)} />
+        <StrategyCall onBook={() => setConsultOpen(true)} />
         <Testimonials />
         <FAQ />
         <Contact />
       </main>
       <Footer />
-      <ConsultationModal open={consultOpen} onOpenChange={setConsultOpen} />
+      <StrategyCallModal open={consultOpen} onOpenChange={setConsultOpen} />
       <FloatingActions />
     </div>
   );

@@ -65,7 +65,7 @@ export interface Project {
   subtitle?: string;
   role: string;
   year: string;
-  /** Sortable date — newest first when descending */
+  /** Sortable date; newest first when descending */
   date: string;
   summary: string;
   tags: string[];
@@ -76,7 +76,7 @@ export interface Project {
   keyFeatures: ProjectFeature[];
   myRole: string[];
   outcome: string;
-  /** Live link — only used for "product" kind */
+  /** Live link: only used for "product" kind */
   url?: string;
   /** Optional image set for the bento grid (5 ideal) */
   images?: string[];
@@ -102,7 +102,7 @@ export const projects: Project[] = [
       "Lack interaction-driven storytelling that engages users",
     ],
     solution:
-      "We approached SitePad as an experience-first product — presenting the interface as part of the storytelling, using motion and interaction to guide attention, and creating moments of realization through perspective shifts. Instead of simply showing the product, the experience was designed to simulate usage through the landing page itself.",
+      "We approached SitePad as an experience-first product; presenting the interface as part of the storytelling, using motion and interaction to guide attention, and creating moments of realization through perspective shifts. Instead of simply showing the product, the experience was designed to simulate usage through the landing page itself.",
     keyFeatures: [
       {
         title: "Scroll-Based Perspective Reveal",
@@ -161,7 +161,7 @@ export const projects: Project[] = [
       "Interfaces can feel overwhelming or inefficient for everyday users",
       "Friction in fast, informal financial contexts"
     ],
-    solution: "We designed a chat-first experience where users interact with their finances the same way they communicate daily — through simple messages in English or Pidgin. The system interprets user intent and converts it into real actions like transfers, savings, and navigation.",
+    solution: "We designed a chat-first experience where users interact with their finances the same way they communicate daily: through simple messages in English or Pidgin. The system interprets user intent and converts it into real actions like transfers, savings, and navigation.",
     keyFeatures: [
       { title: "Conversational UI", description: "Natural language interface for all financial actions." },
       { title: "Smart Transfers", description: "Send money via simple text messages." },
@@ -304,7 +304,7 @@ export const projects: Project[] = [
     date: "2025-03-15",
     summary: "A versatile set of 4 unique landing page structures designed to serve as a high-quality foundation for any digital product or service.",
     tags: ["UI/UX", "Systems", "Web", "Templates"],
-    overview: "In collaboration with a developer, I designed a suite of four landing page templates. The objective was to create a flexible 'starter pack' that maintains high design standards while being easily adaptable across various industries—from SaaS to creative services.",
+    overview: "In collaboration with a developer, I designed a suite of four landing page templates. The objective was to create a flexible 'starter pack' that maintains high design standards while being easily adaptable across various industries; from SaaS to creative services.",
     problem: [
       "Starting every landing page from scratch leads to inconsistent UX and delayed launches.",
       "Generic templates often lack the narrative structure required for effective product storytelling.",
@@ -434,7 +434,7 @@ export const projects: Project[] = [
   {
     slug: "lumen-banking",
     kind: "work",
-    title: "Lumen — Mobile Banking",
+    title: "Lumen; Mobile Banking",
     subtitle: "Neobank App Redesign",
     role: "Lead UI/UX Designer",
     year: "2024",
@@ -453,9 +453,9 @@ export const projects: Project[] = [
       "Audited every primary flow, reduced primary navigation from seven destinations to four, rebuilt the transaction surface around user intent, and shipped a tighter visual system based on a single neutral grayscale.",
     keyFeatures: [
       { title: "Intent-led transactions", description: "Send / Request / Pay grouped by user goal, not product type." },
-      { title: "Calm typographic system", description: "One typeface, four weights, strict scale — readable across long sessions." },
+      { title: "Calm typographic system", description: "One typeface, four weights, strict scale: readable across long sessions." },
       { title: "Four-tab navigation", description: "Reduced cognitive load with a flatter primary IA." },
-      { title: "Trust surfaces", description: "Account verification, fees, and limits surfaced early — not buried in settings." },
+      { title: "Trust surfaces", description: "Account verification, fees, and limits surfaced early; not buried in settings." },
     ],
     myRole: [
       "Led discovery, IA, and end-to-end visual design",
@@ -468,7 +468,7 @@ export const projects: Project[] = [
   {
     slug: "northbeam-crm",
     kind: "work",
-    title: "Northbeam — Operator CRM",
+    title: "Northbeam; Operator CRM",
     subtitle: "Keyboard-first Revenue Workspace",
     role: "Product Designer",
     year: "2024",
@@ -480,7 +480,7 @@ export const projects: Project[] = [
     problem: [
       "Daily work happened outside the product, in spreadsheets",
       "Saved views were buried and felt secondary",
-      "No keyboard model — every action required a mouse",
+      "No keyboard model: every action required a mouse",
     ],
     solution:
       "Mapped real operator decision loops, designed a keyboard-first inbox, and made saved views a first-class object with shareable URLs.",
@@ -500,7 +500,7 @@ export const projects: Project[] = [
   {
     slug: "atlas-health",
     kind: "work",
-    title: "Atlas — Clinic Operations",
+    title: "Atlas; Clinic Operations",
     subtitle: "Front-desk Operating System",
     role: "UI/UX Designer",
     year: "2023",
@@ -531,7 +531,7 @@ export const projects: Project[] = [
   {
     slug: "field-studio",
     kind: "work",
-    title: "Field — Studio Site",
+    title: "Field; Studio Site",
     subtitle: "Editorial Architecture Portfolio",
     role: "Designer & Builder",
     year: "2023",
@@ -539,7 +539,7 @@ export const projects: Project[] = [
     summary: "An editorial portfolio site for a small architecture studio.",
     tags: ["UI/UX", "Web"],
     overview:
-      "The studio wanted a site that felt like their built work — quiet, confident, generous. Built around case studies, not services.",
+      "The studio wanted a site that felt like their built work; quiet, confident, generous. Built around case studies, not services.",
     problem: [
       "Existing site read like a services template",
       "Beautiful built work was buried in a generic gallery",
@@ -578,7 +578,7 @@ export const projects: Project[] = [
     keyFeatures: [
       { title: "Calm writing surface", description: "No formatting toolbar, just structure and flow." },
       { title: "Real-update templates", description: "Derived from anonymized monthly updates, not generic prompts." },
-      { title: "Suggestion-only AI", description: "AI nudges, never auto-writes — voice stays yours." },
+      { title: "Suggestion-only AI", description: "AI nudges, never auto-writes; voice stays yours." },
     ],
     myRole: [
       "Sole founder, designer, and builder",
@@ -599,7 +599,7 @@ export const projects: Project[] = [
     summary: "A quiet habit tracker built around weekly reflection, not streaks.",
     tags: ["Product", "Mobile"],
     overview:
-      "Existing trackers reward addiction patterns. Signal rewards honesty — one screen, one weekly question, local-first by default.",
+      "Existing trackers reward addiction patterns. Signal rewards honesty: one screen, one weekly question, local-first by default.",
     problem: [
       "Streak-based trackers create guilt, not insight",
       "Daily check-ins feel like another job",
@@ -626,7 +626,7 @@ export const projects: Project[] = [
     summary: "Simple bookkeeping for service businesses that hate accounting tools.",
     tags: ["Product", "SaaS"],
     overview:
-      "Small studios wanted a financial picture without learning double-entry accounting. LedgerLite answered three real questions owners ask weekly — without the jargon.",
+      "Small studios wanted a financial picture without learning double-entry accounting. LedgerLite answered three real questions owners ask weekly; without the jargon.",
     problem: [
       "Existing tools assume an accounting background",
       "Studio owners just want three numbers, weekly",
@@ -635,7 +635,7 @@ export const projects: Project[] = [
     solution:
       "Designed around three real questions owners ask weekly. Shipped a working MVP in five weeks.",
     keyFeatures: [
-      { title: "Three-number dashboard", description: "Cash in, cash out, runway — the only view most owners need." },
+      { title: "Three-number dashboard", description: "Cash in, cash out, runway: the only view most owners need." },
       { title: "Friendly categorization", description: "Plain-language buckets, not chart-of-accounts codes." },
       { title: "Weekly digest", description: "A Monday email summarizing the week without opening the app." },
     ],

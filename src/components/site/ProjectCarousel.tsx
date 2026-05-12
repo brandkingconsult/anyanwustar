@@ -92,7 +92,7 @@ const ProjectCard = ({
       <div className="mt-4 flex items-start justify-between gap-6">
         <div>
           <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-            {project.role} — {project.year}
+            {project.role}; {project.year}
           </p>
           <p className="mt-2 max-w-md text-sm text-foreground/80">
             {project.summary}
@@ -154,7 +154,7 @@ export const ProjectCarousel = ({
         <div className="reveal flex flex-col gap-8 tablet:flex-row tablet:items-end tablet:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
-              {index} — {eyebrow}
+              {index}; {eyebrow}
             </p>
             <h2 className="mt-6 max-w-2xl font-display text-3xl font-medium leading-tight tablet:text-5xl">
               {title}
@@ -166,7 +166,7 @@ export const ProjectCarousel = ({
               to={`/projects?type=${basePath === "/work" ? "work" : "product"}`}
               className="group inline-flex items-center gap-2 border border-border bg-foreground/[0.04] px-4 py-2.5 text-[11px] uppercase tracking-[0.22em] text-foreground transition-all hover:border-foreground/40 hover:bg-foreground/[0.08]"
             >
-              View all {basePath === "/work" ? "work" : "products"}
+              View all {basePath === "/work" ? "work" : "case studies"}
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </Link>
           </div>
@@ -183,7 +183,7 @@ export const ProjectCarousel = ({
             "linear-gradient(to right, transparent, black 4%, black 96%, transparent)",
         }}
       >
-        {/* Scroll container — manual horizontal scroll on all devices */}
+        {/* Scroll container; manual horizontal scroll on all devices */}
         <div
           className="overflow-x-auto overflow-y-hidden scrollbar-hide"
           style={{ WebkitOverflowScrolling: "touch" }}

@@ -7,7 +7,7 @@ export interface Testimonial {
   shift: string;
   after: string;
   pullQuote: string;
-  /** ISO date — newest first ordering */
+  /** ISO date; newest first ordering */
   date: string;
   tags: string[];
 }
@@ -22,7 +22,7 @@ export const testimonials: Testimonial[] = [
     before:
       "Imani's team had been sitting on a redesign for fourteen months. Three failed attempts, two contractors, and a product that quietly leaked customers every release.",
     shift:
-      "One 90-minute session reframed the actual problem — it wasn't visual, it was conceptual. We rebuilt the information architecture in week one and shipped a working redesign in five.",
+      "One 90-minute session reframed the actual problem: it wasn't visual, it was conceptual. We rebuilt the information architecture in week one and shipped a working redesign in five.",
     after:
       "Activation up 28%. Two enterprise deals closed citing the new product surface. The internal team picked up the system and is shipping faster than they have in two years.",
     pullQuote:
@@ -60,7 +60,7 @@ export const testimonials: Testimonial[] = [
     after:
       "MVP shipped in nine weeks. First paying customer in week eleven. The clarity on who we were building for outlasted the design work.",
     pullQuote:
-      "I expected screens. I got a sharper business — the screens were almost a side effect.",
+      "I expected screens. I got a sharper business: the screens were almost a side effect.",
     date: "2025-06-21",
     tags: ["Fintech", "Strategy"],
   },
@@ -77,7 +77,7 @@ export const testimonials: Testimonial[] = [
     after:
       "Average check-in time fell from 4m20s to 1m45s. Clinic three onboarded in four days instead of three weeks. The team's design quality bar permanently moved up.",
     pullQuote:
-      "He raised the bar for our whole team — and the bar stayed raised after he left.",
+      "He raised the bar for our whole team; and the bar stayed raised after he left.",
     date: "2025-04-09",
     tags: ["HealthTech", "Workflow"],
   },
@@ -86,7 +86,7 @@ export const testimonials: Testimonial[] = [
     name: "Aïcha B.",
     role: "Growth Lead",
     shortQuote:
-      "He doesn't just design screens — he builds clarity. Our onboarding conversion went from 31% to 58% in one quarter.",
+      "He doesn't just design screens: he builds clarity. Our onboarding conversion went from 31% to 58% in one quarter.",
     before:
       "Onboarding was a nine-step funnel with a 31% completion rate. Every growth experiment touched copy and pixels but never the underlying logic.",
     shift:
@@ -107,7 +107,7 @@ export const testimonials: Testimonial[] = [
     before:
       "A two-sided marketplace with a beautiful supply side and a confusing demand side. Buyers were bouncing in seconds.",
     shift:
-      "Star spent three days with our financial model before opening Figma. He understood unit economics before he picked a typeface — and the work showed it.",
+      "Star spent three days with our financial model before opening Figma. He understood unit economics before he picked a typeface; and the work showed it.",
     after:
       "Buyer-side conversion lifted 41%. Average order value up 18%. We finally have a marketplace that respects both sides equally.",
     pullQuote:

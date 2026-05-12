@@ -64,7 +64,7 @@ export const Contact = () => {
       await navigator.clipboard.writeText(CONTACT_EMAIL);
       toast.success("Email address copied");
     } catch {
-      toast.error("Couldn't copy — long-press the email above to copy it.");
+      toast.error("Couldn't copy: long-press the email above to copy it.");
     }
   };
 
@@ -73,7 +73,7 @@ export const Contact = () => {
       <div className="container-tight">
         <div className="reveal">
           <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
-            09 — Contact
+            09; Contact
           </p>
           <h2 className="mt-6 font-display text-5xl font-medium leading-[1.02] tablet:text-7xl lg:text-8xl">
             Let's talk.
@@ -107,7 +107,7 @@ export const Contact = () => {
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
             <span className="text-xs text-muted-foreground">
-              Quickest replies — usually within a few hours.
+              Quickest replies; usually within a few hours.
             </span>
           </div>
         </div>
@@ -153,7 +153,7 @@ export const Contact = () => {
             <div className="flex justify-between">
               <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
                 {wordCount > MAX_WORDS && (
-                  <span className="text-destructive animate-pulse">Too long — please shorten your message</span>
+                  <span className="text-destructive animate-pulse">Too long: please shorten your message</span>
                 )}
               </p>
               <p 

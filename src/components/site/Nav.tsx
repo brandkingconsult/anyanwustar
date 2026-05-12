@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const links = [
-  { href: "#work", label: "Work" },
-  { href: "#products", label: "Products" },
+  { href: "#work", label: "Case Studies" },
+  { href: "#products", label: "Solutions" },
   { href: "#process", label: "Process" },
-  { href: "#consultation", label: "Consultation" },
+  { href: "#strategy-call", label: "Strategy Call" },
   { href: "#contact", label: "Contact" },
 ];
 
 interface NavProps {
-  onBookConsultation?: () => void;
+  onBookStrategyCall?: () => void;
 }
 
-export const Nav = ({ onBookConsultation }: NavProps = {}) => {
+export const Nav = ({ onBookStrategyCall }: NavProps = {}) => {
   const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
   const onHome = pathname === "/";
@@ -27,11 +27,10 @@ export const Nav = ({ onBookConsultation }: NavProps = {}) => {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "border-b border-border bg-background/80 backdrop-blur-md"
-          : "border-b border-transparent"
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled
+        ? "border-b border-border bg-background/80 backdrop-blur-md"
+        : "border-b border-transparent"
+        }`}
     >
       <div className="container-tight flex h-16 items-center justify-between">
         <Link to="/" className="font-display text-sm font-semibold tracking-tight">
@@ -50,12 +49,12 @@ export const Nav = ({ onBookConsultation }: NavProps = {}) => {
           ))}
         </nav>
 
-        {onBookConsultation ? (
+        {onBookStrategyCall ? (
           <button
-            onClick={onBookConsultation}
+            onClick={onBookStrategyCall}
             className="hidden items-center gap-2 bg-primary px-4 py-2 text-[10px] uppercase tracking-[0.22em] text-primary-foreground transition-colors hover:bg-primary/90 md:inline-flex"
           >
-            Book consultation
+            Book strategy call
           </button>
         ) : (
           <a

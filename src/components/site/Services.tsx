@@ -19,7 +19,7 @@ export const Services = () => {
       <div className="container-tight">
         <div className="reveal">
           <p className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
-            05 — Services
+            05; Services
           </p>
           <h2 className="mt-6 max-w-3xl font-display text-3xl font-medium leading-tight tablet:text-5xl">
             Three ways to work with me.
