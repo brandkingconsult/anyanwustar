@@ -15,7 +15,7 @@ interface StrategyCallModalProps {
   onOpenChange: (open: boolean) => void;
 }
 
-const focuses = ["UI/UX Design", "Product Build", "Digital Strategy", "Website Audit / Other"];
+const focuses = ["UI/UX Design", "Product Build", "Website Audit", "Other"];
 
 export const StrategyCallModal = ({ open, onOpenChange }: StrategyCallModalProps) => {
   const [step, setStep] = useState(1);
@@ -23,6 +23,7 @@ export const StrategyCallModal = ({ open, onOpenChange }: StrategyCallModalProps
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
   const [focus, setFocus] = useState(focuses[0]);
+  const [otherFocus, setOtherFocus] = useState("");
   const [notes, setNotes] = useState("");
   const [date, setDate] = useState<Date | undefined>();
 
@@ -30,6 +31,7 @@ export const StrategyCallModal = ({ open, onOpenChange }: StrategyCallModalProps
     setStep(1);
     setName(""); setEmail(""); setCompany(""); setNotes(""); setDate(undefined);
     setFocus(focuses[0]);
+    setOtherFocus("");
   };
 
   const handleClose = (v: boolean) => {
@@ -48,7 +50,7 @@ export const StrategyCallModal = ({ open, onOpenChange }: StrategyCallModalProps
       name,
       email,
       a1: company,
-      a2: focus,
+      a2: focus === "Other" ? otherFocus || "Other" : focus,
       a3: `Preferred date: ${format(date, "PPP")}\n\n${notes}`,
       month: format(date, "yyyy-MM"),
       date: format(date, "yyyy-MM-dd"),
@@ -64,7 +66,7 @@ export const StrategyCallModal = ({ open, onOpenChange }: StrategyCallModalProps
   return (
     <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent
-        className="max-w-2xl gap-0 border border-border bg-background p-0 sm:!rounded-none"
+        className="max-w-2xl gap-0 border border-border bg-background p-0 sm:!rounded-none [&>button]:hidden"
       >
         {/* Header */}
         <div className="flex items-center justify-between border-b border-border px-6 py-4 tablet:px-8">
@@ -158,7 +160,24 @@ export const StrategyCallModal = ({ open, onOpenChange }: StrategyCallModalProps
                     </button>
                   ))}
                 </div>
+                {focus === "Other" && (
+                  <div className="mt-3">
+                    <input
+                      value={otherFocus}
+                      onChange={(e) => setOtherFocus(e.target.value)}
+                      className="hero-input"
+                      placeholder="Please specify..."
+                      required
+                    />
+                  </div>
+                )}
               </Field>
+
+              <div className="pt-2">
+                <p className="text-xs text-muted-foreground">
+                  * Note: I am only available on weekdays from 11AM till 5PM for Strategy calls/meetings.
+                </p>
+              </div>
 
               <div className="flex justify-end pt-4">
                 <button

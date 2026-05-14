@@ -1,7 +1,7 @@
 const disciplines = [
-  { label: "Design", desc: "Interface systems, product surfaces, end-to-end UX." },
-  { label: "Build", desc: "Real, functional solutions via AI-assisted development." },
-  { label: "Strategy", desc: "Digital presence, structure, and business clarity." },
+  { label: "UI/UX Design", desc: "Premium interface systems, product surfaces, and end-to-end UX in Figma." },
+  { label: "MVP Build", desc: "Rapid, functional product building via AI-assisted workflows." },
+  { label: "Website Audit", desc: "Actionable improvements to strengthen feel, flow, and drive conversions." },
 ];
 
 export const About = () => {
@@ -17,16 +17,10 @@ export const About = () => {
           </h2>
           <div className="mt-10 space-y-6 text-base leading-relaxed text-muted-foreground tablet:text-lg">
             <p>
-              I work at the intersection of design, product, and business. My
-              practice started in interface design: the discipline of making
-              complex systems feel obvious; and grew into building the actual
-              products around them.
+              I help founders and startups build modern MVPs, startup platforms, and digital products using AI-assisted workflows. My practice started in UI/UX design: the discipline of making complex systems feel obvious; and grew into building the actual products around them.
             </p>
             <p>
-              Today, I help founders and teams clarify their digital presence,
-              design the experience, and ship the product. No drawn-out
-              hand-offs. No template work. Just direct, intentional craft;
-              delivered fast.
+              Today, my work spans three core pillars: designing premium UI/UX systems in Figma, building rapid MVPs with AI-assisted development, and auditing existing websites to improve flow, conversion, and user experience. No drawn-out hand-offs. Just direct, intentional craft; delivered fast.
             </p>
           </div>
         </div>

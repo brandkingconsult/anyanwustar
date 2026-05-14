@@ -3,6 +3,7 @@ import { TopNav } from "@/components/site/TopNav";
 import { Footer } from "@/components/site/Footer";
 import { Hero } from "@/components/site/Hero";
 import { About } from "@/components/site/About";
+import { WhoIWorkWith } from "@/components/site/WhoIWorkWith";
 import { ProjectCarousel } from "@/components/site/ProjectCarousel";
 import { Process } from "@/components/site/Process";
 import { Services } from "@/components/site/Services";
@@ -22,7 +23,7 @@ const Index = () => {
   useEffect(() => {
     document.title = "Star; Designer, Founder, Product Builder";
     const desc =
-      "Star designs interfaces, builds real products with AI-assisted development, and helps businesses sharpen their digital presence.";
+      "Star designs premium UI/UX systems in Figma, builds rapid MVPs with AI-assisted workflows, and audits websites to strengthen conversions.";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");
@@ -38,6 +39,7 @@ const Index = () => {
       <main>
         <Hero onBookStrategyCall={() => setConsultOpen(true)} />
         <About />
+        <WhoIWorkWith />
         <ProjectCarousel
           id="work"
           index="02"

@@ -1,15 +1,15 @@
 const services = [
   {
     title: "UI/UX Design",
-    items: ["Product surfaces", "Design systems", "Flow & IA audits", "Mobile & web"],
+    items: ["Full UI/UX systems in Figma", "Product surfaces", "Flow & IA audits", "Mobile & web"],
   },
   {
     title: "Product Build",
-    items: ["AI-assisted development", "MVP in weeks", "Frontend + integrations", "Founder-mode pacing"],
+    items: ["MVP in weeks", "AI-assisted development", "Lovable, Claude & Antigravity", "Frontend + integrations"],
   },
   {
-    title: "Digital Strategy",
-    items: ["Site & presence audits", "Positioning clarity", "Conversion structure", "Stack recommendations"],
+    title: "Website Audit",
+    items: ["Experience & flow review", "Conversion optimization", "Performance insights", "Actionable improvements"],
   },
 ];
 

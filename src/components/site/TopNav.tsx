@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Download, Menu, X } from "lucide-react";
+import { Logo } from "@/components/site/Logo";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -45,14 +46,7 @@ export const TopNav = ({ onBookStrategyCall }: TopNavProps) => {
     >
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-5 tablet:h-20 tablet:px-10">
         <Link to="/" onClick={close} className="group flex items-center gap-2.5">
-          <span
-            aria-hidden
-            className="flex h-7 w-7 items-center justify-center bg-primary text-primary-foreground transition-transform duration-500 group-hover:rotate-[72deg]"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-              <path d="M12 2l2.6 7.2L22 10l-5.8 4.4L18.5 22 12 17.7 5.5 22l2.3-7.6L2 10l7.4-.8L12 2z" />
-            </svg>
-          </span>
+          <Logo className="h-8 w-8 text-foreground transition-transform duration-500 group-hover:rotate-[72deg]" />
           <span className="font-display text-base font-semibold tracking-tight text-foreground">
             Star
           </span>
