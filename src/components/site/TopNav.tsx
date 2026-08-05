@@ -4,11 +4,12 @@ import { Download, Menu, X } from "lucide-react";
 import { Logo } from "@/components/site/Logo";
 
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#services", label: "Services" },
-  { href: "#work", label: "Case Studies" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#home", label: "Home" },
+  { href: "/#services", label: "Services" },
+  { href: "/#work", label: "Case Studies" },
+  { href: "/temmora", label: "Templates" },
+  { href: "/#about", label: "About" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 interface TopNavProps {

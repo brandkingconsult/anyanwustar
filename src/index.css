@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .perspective-\[1200px\] {
+    perspective: 1200px;
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
+
 @layer base {
   :root {
     /* Dark-only premium charcoal palette */
@@ -85,6 +97,10 @@
 @layer components {
   .container-tight {
     @apply mx-auto w-full max-w-6xl px-6 tablet:px-10;
+  }
+
+  .temmora-container {
+    @apply mx-auto w-full max-w-7xl px-5 tablet:px-10;
   }
 
 
